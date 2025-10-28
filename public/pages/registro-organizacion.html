@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Organizaciones | PETHOUSE</title>
+    <meta name="description" content="Únete a la red PETHOUSE - Plataforma digital para organizaciones de rescate animal">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../registro-organizacion.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="registro-organizacion">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo-link">
+                    <i class="fas fa-paw logo-icon"></i>
+                    <span class="logo-text">PETHOUSE</span>
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="adopciones.html" class="nav-link">Adopciones</a>
+                <a href="tienda.html" class="nav-link">Tienda</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            
+            <div class="auth-section">
+                <a href="login.html" class="auth-btn">
+                    <i class="fas fa-user"></i>
+                    Ingresar
+                </a>
+            </div>
+            
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1><i class="fas fa-building"></i> Únete a la Red PETHOUSE</h1>
+                <p>Conecta tu organización con miles de familias que buscan adoptar. Simplifica tus procesos de adopción y amplifica tu impacto en el rescate animal.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <div class="stat-number">2,847</div>
+                        <div class="stat-label">Adopciones Exitosas</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-building"></i>
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Organizaciones Aliadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-paw"></i>
+                        <div class="stat-number">5,234</div>
+                        <div class="stat-label">Mascotas Registradas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="beneficios-section">
+        <div class="container">
+            <h2>¿Por qué elegir PETHOUSE?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Alcance Nacional</h3>
+                    <p>Conecta con adoptantes de todo México</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Plataforma Digital</h3>
+                    <p>Gestión 100% online de adopciones</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Estadísticas</h3>
+                    <p>Seguimiento detallado de adopciones</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Verificación</h3>
+                    <p>Proceso seguro y confiable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section class="proceso-section">
+        <div class="container">
+            <h2><i class="fas fa-clipboard-list"></i> Proceso de Registro</h2>
+            <div class="proceso-steps">
+                <div class="proceso-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Información Básica</h3>
+                        <p>Completa los datos fundamentales de tu organización</p>
+                    </div>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Documentación Legal</h3>
+                        <p>Sube los documentos que acreditan tu organización</p>
+                    </div>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Verificación</h3>
+                        <p>Nuestro equipo revisará y verificará tu información</p>
+                    </div>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Activación</h3>
+                        <p>Recibe acceso completo a la plataforma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario Section -->
+    <section class="formulario-section">
+        <div class="container">
+            <!-- Form Header -->
+            <div class="form-header">
+                <h2><i class="fas fa-clipboard-check"></i> Registro de Organización</h2>
+                <p>Completa el formulario y en 24-48 horas tu organización estará activa</p>
+            </div>
+
+            <!-- Alert -->
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <strong>Proceso simplificado:</strong> Solo necesitas completar 4 pasos básicos.
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Paso 1 de 4</div>
+            </div>
+
+            <!-- Steps Indicator -->
+            <div class="steps-indicator">
+                <div class="step-indicator active" id="step-indicator-1">
+                    <div class="step-number">1</div>
+                    <h4>Información Básica</h4>
+                    <p>Datos de la organización</p>
+                </div>
+                <div class="step-indicator" id="step-indicator-2">
+                    <div class="step-number">2</div>
+                    <h4>Contacto</h4>
+                    <p>Información de contacto</p>
+                </div>
+                <div class="step-indicator" id="step-indicator-3">
+                    <div class="step-number">3</div>
+                    <h4>Documentos</h4>
+                    <p>Documentación legal</p>
+                </div>
+                <div class="step-indicator" id="step-indicator-4">
+                    <div class="step-number">4</div>
+                    <h4>Confirmación</h4>
+                    <p>Revisar y enviar</p>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <form id="registroForm" class="registro-form">
+                <!-- Paso 1: Información Básica -->
+                <div class="form-step active" id="form-step-1">
+                    <h3><i class="fas fa-building"></i> Información Básica</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombreOrganizacion">
+                                <i class="fas fa-tag"></i> Nombre de la Organización *
+                            </label>
+                            <input type="text" id="nombreOrganizacion" required 
+                                   placeholder="Ej: Fundación Amor Animal">
+                            <small>Nombre oficial de la organización</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipoOrganizacion">
+                                <i class="fas fa-list"></i> Tipo de Organización *
+                            </label>
+                            <select id="tipoOrganizacion" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="fundacion">Fundación</option>
+                                <option value="refugio">Refugio</option>
+                                <option value="ong">ONG</option>
+                                <option value="asociacion">Asociación Civil</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="descripcion">
+                                <i class="fas fa-align-left"></i> Descripción de la Organización *
+                            </label>
+                            <textarea id="descripcion" required rows="4" 
+                                    placeholder="Describe la misión, visión y actividades principales de tu organización..."></textarea>
+                            <small>Mínimo 50 caracteres</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="añoFundacion">
+                                <i class="fas fa-calendar"></i> Año de Fundación *
+                            </label>
+                            <input type="number" id="añoFundacion" required min="1900" max="2025"
+                                   placeholder="2020">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numeroMascotas">
+                                <i class="fas fa-paw"></i> Número de Mascotas Actuales
+                            </label>
+                            <input type="number" id="numeroMascotas" min="0"
+                                   placeholder="25">
+                            <small>Aproximado de mascotas bajo su cuidado</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 2: Información de Contacto -->
+                <div class="form-step" id="form-step-2">
+                    <h3><i class="fas fa-address-book"></i> Información de Contacto</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="personaContacto">
+                                <i class="fas fa-user"></i> Persona de Contacto *
+                            </label>
+                            <input type="text" id="personaContacto" required 
+                                   placeholder="Nombre del responsable">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cargoContacto">
+                                <i class="fas fa-briefcase"></i> Cargo *
+                            </label>
+                            <input type="text" id="cargoContacto" required 
+                                   placeholder="Director, Coordinador, etc.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailContacto">
+                                <i class="fas fa-envelope"></i> Email de Contacto *
+                            </label>
+                            <input type="email" id="emailContacto" required 
+                                   placeholder="contacto@organizacion.org">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefonoContacto">
+                                <i class="fas fa-phone"></i> Teléfono *
+                            </label>
+                            <input type="tel" id="telefonoContacto" required 
+                                   placeholder="+52 55 1234-5678">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="direccion">
+                                <i class="fas fa-map-marker-alt"></i> Dirección Completa *
+                            </label>
+                            <textarea id="direccion" required rows="3" 
+                                    placeholder="Calle, número, colonia, ciudad, estado, código postal"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sitioWeb">
+                                <i class="fas fa-globe"></i> Sitio Web
+                            </label>
+                            <input type="url" id="sitioWeb" 
+                                   placeholder="https://www.organizacion.org">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="redesSociales">
+                                <i class="fab fa-facebook"></i> Redes Sociales
+                            </label>
+                            <input type="text" id="redesSociales" 
+                                   placeholder="Facebook, Instagram, etc.">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 3: Documentación -->
+                <div class="form-step" id="form-step-3">
+                    <h3><i class="fas fa-file-alt"></i> Documentación Legal</h3>
+                    
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-certificate"></i> Acta Constitutiva o Documento Legal
+                        </label>
+                        <div class="file-upload" onclick="document.getElementById('actaConstitutiva').click()">
+                            <input type="file" id="actaConstitutiva" accept=".pdf,.jpg,.jpeg,.png">
+                            <div class="file-upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p><strong>Haz clic para subir archivo</strong></p>
+                            <p>PDF, JPG o PNG (máx. 5MB)</p>
+                        </div>
+                        <small id="actaStatus">No se ha seleccionado archivo</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-id-card"></i> Identificación del Representante Legal
+                        </label>
+                        <div class="file-upload" onclick="document.getElementById('identificacion').click()">
+                            <input type="file" id="identificacion" accept=".pdf,.jpg,.jpeg,.png">
+                            <div class="file-upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p><strong>Haz clic para subir archivo</strong></p>
+                            <p>PDF, JPG o PNG (máx. 5MB)</p>
+                        </div>
+                        <small id="identificacionStatus">No se ha seleccionado archivo</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registroOficial">
+                            <i class="fas fa-clipboard-list"></i> Número de Registro Oficial
+                        </label>
+                        <input type="text" id="registroOficial" 
+                               placeholder="RFC, CLUNI, etc.">
+                        <small>Si aplica</small>
+                    </div>
+                </div>
+
+                <!-- Paso 4: Confirmación -->
+                <div class="form-step" id="form-step-4">
+                    <h3><i class="fas fa-check-circle"></i> Confirmación y Términos</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Revisar información:</strong> Asegúrate de que todos los datos sean correctos antes de enviar.
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="aceptarTerminos" required>
+                            <span class="checkmark"></span>
+                            Acepto los términos y condiciones de PETHOUSE *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="aceptarPoliticas" required>
+                            <span class="checkmark"></span>
+                            Acepto las políticas de privacidad *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="aceptarComunicaciones">
+                            <span class="checkmark"></span>
+                            Acepto recibir comunicaciones sobre la plataforma
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="btnAnterior" onclick="anteriorPaso()" style="display: none;">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    
+                    <button type="button" class="btn btn-primary" id="btnSiguiente" onclick="siguientePaso()">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <button type="submit" class="btn btn-success" id="btnEnviar" style="display: none;">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal" id="modalConfirmacion">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>¡Solicitud Enviada!</h2>
+            <p>Tu solicitud de registro ha sido enviada exitosamente.</p>
+            
+            <div class="next-steps">
+                <h4>📋 Próximos pasos:</h4>
+                <ul>
+                    <li>Recibirás confirmación por email en los próximos minutos</li>
+                    <li>Revisaremos tu solicitud en 24-48 horas</li>
+                    <li>Te contactaremos para verificar información</li>
+                    <li>Una vez aprobada, recibirás acceso completo</li>
+                </ul>
+            </div>
+            
+            <p><strong>Número de solicitud: #ORG-2025-<span id="numeroSolicitud"></span></strong></p>
+            
+            <button class="btn btn-primary" onclick="cerrarModal()">
+                <i class="fas fa-check"></i> Entendido
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>PETHOUSE</span>
+                    </div>
+                    <p>Conectando corazones, transformando vidas</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <a href="index.html">Inicio</a>
+                    <a href="adopciones.html">Adopciones</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Organizaciones</h4>
+                    <a href="registro-organizacion.html">Registrarse</a>
+                    <a href="login.html">Acceso</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PETHOUSE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para funcionalidad del formulario -->
+    <!-- Scripts -->
+    <script src="../organizaciones-api.js"></script>
+    <script src="../registro-organizacion.js"></script>
+    
+    <!-- Script de diagnóstico -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Iniciando diagnóstico del sistema...');
+            
+            // Verificar que las funciones estén disponibles
+            setTimeout(() => {
+                console.log('📋 Verificando funciones disponibles:');
+                console.log('- organizacionesAPI:', typeof organizacionesAPI);
+                console.log('- window.enviarSolicitudOrganizacion:', typeof window.enviarSolicitudOrganizacion);
+                console.log('- window.obtenerSolicitudesAdmin:', typeof window.obtenerSolicitudesAdmin);
+                
+                // Verificar localStorage
+                const solicitudesExistentes = localStorage.getItem('pethouse_solicitudes_organizaciones');
+                console.log('📁 Solicitudes en localStorage:', solicitudesExistentes ? JSON.parse(solicitudesExistentes).length : 0);
+                
+                if (solicitudesExistentes) {
+                    console.log('📋 Datos existentes:', JSON.parse(solicitudesExistentes));
+                }
+            }, 1000);
+            
+            // Escuchar eventos de solicitud enviada
+            window.addEventListener('solicitudEnviada', function(event) {
+                console.log('✅ Evento solicitudEnviada recibido:', event.detail);
+                
+                // Verificar que se guardó correctamente
+                setTimeout(() => {
+                    const solicitudes = JSON.parse(localStorage.getItem('pethouse_solicitudes_organizaciones') || '[]');
+                    console.log('📁 Total de solicitudes después del envío:', solicitudes.length);
+                    console.log('📋 Última solicitud guardada:', solicitudes[solicitudes.length - 1]);
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

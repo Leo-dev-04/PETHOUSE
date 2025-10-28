@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PETHOUSE</title>
+    <meta name="description" content="Panel de control para organizaciones. Gestiona mascotas, adopciones y estadísticas.">
+    
+    <!-- Estilos Unificados -->
+    <link rel="stylesheet" href="../dashboard.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/LOGO.jpg">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar de navegación -->
+    <div class="dashboard-sidebar">
+        <div class="sidebar-header">
+            <div class="logo-dashboard">
+                <div class="logo">🐾</div>
+                <h2>PETHOUSE</h2>
+            </div>
+            <div class="organizacion-info">
+                <div class="org-avatar">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="org-details">
+                    <h3>Fundación Patitas Felices</h3>
+                    <span class="org-status">✓ Verificada</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#mascotas" class="nav-item" data-section="mascotas">
+                <i class="fas fa-paw"></i>
+                <span>Mis Mascotas</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="#adopciones" class="nav-item" data-section="adopciones">
+                <i class="fas fa-heart"></i>
+                <span>Adopciones</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="#solicitudes" class="nav-item" data-section="solicitudes">
+                <i class="fas fa-file-alt"></i>
+                <span>Solicitudes</span>
+                <span class="nav-badge">7</span>
+            </a>
+            <a href="#chat" class="nav-item" data-section="chat">
+                <i class="fas fa-comments"></i>
+                <span>Mensajes</span>
+                <span class="nav-badge">2</span>
+            </a>
+            <a href="#citas" class="nav-item" data-section="citas">
+                <i class="fas fa-calendar"></i>
+                <span>Citas</span>
+            </a>
+            <a href="#donaciones" class="nav-item" data-section="donaciones">
+                <i class="fas fa-donate"></i>
+                <span>Donaciones</span>
+            </a>
+            <a href="#perfil" class="nav-item" data-section="perfil">
+                <i class="fas fa-cog"></i>
+                <span>Mi Perfil</span>
+            </a>
+            <div class="sidebar-divider"></div>
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Volver al Sitio</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Cerrar Sesión</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="dashboard-main">
+        <!-- Header superior -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="btn-action" title="Notificaciones">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="btn-action" title="Ayuda">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+                <div class="user-menu">
+                    <img src="../assets/images/canelo.webp" alt="Usuario" class="user-avatar">
+                    <span class="user-name">María González</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido dinámico -->
+        <main class="dashboard-content">
+            <!-- Sección Dashboard Principal -->
+            <section id="section-dashboard" class="content-section active">
+                <!-- KPIs principales -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>12</h3>
+                            <p>Mascotas Activas</p>
+                            <span class="kpi-change positive">+2 esta semana</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: linear-gradient(135deg, #27ae60, #16a085);">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>89</h3>
+                            <p>Adopciones Totales</p>
+                            <span class="kpi-change positive">+5 este mes</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>7</h3>
+                            <p>Solicitudes Pendientes</p>
+                            <span class="kpi-change neutral">Sin cambios</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>$2,450</h3>
+                            <p>Donaciones del Mes</p>
+                            <span class="kpi-change positive">+15% vs anterior</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráficos y actividad reciente -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Adopciones por Mes</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="adopciones-chart" class="chart-placeholder">
+                                <div class="chart-placeholder-content">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <p>Gráfico de adopciones por mes</p>
+                                    <small>Los datos se cargarían dinámicamente</small>
+                                </div>
+                            </canvas>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Actividad Reciente</h3>
+                            <a href="#" class="card-link">Ver todo</a>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Max</strong> fue adoptado por la familia González</p>
+                                    <span class="activity-time">Hace 2 horas</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon info">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Nueva solicitud de adopción para <strong>Luna</strong></p>
+                                    <span class="activity-time">Hace 4 horas</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon warning">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Cita veterinaria para <strong>Rocky</strong> mañana</p>
+                                    <span class="activity-time">Hace 1 día</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-donate"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Donación de $150 recibida</p>
+                                    <span class="activity-time">Hace 2 días</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acciones rápidas -->
+                <div class="quick-actions">
+                    <h3>Acciones Rápidas</h3>
+                    <div class="actions-grid">
+                        <button class="action-card" data-action="nueva-mascota">
+                            <i class="fas fa-plus"></i>
+                            <span>Agregar Mascota</span>
+                        </button>
+                        <button class="action-card" data-action="revisar-solicitudes">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Revisar Solicitudes</span>
+                        </button>
+                        <button class="action-card" data-action="enviar-update">
+                            <i class="fas fa-megaphone"></i>
+                            <span>Enviar Actualización</span>
+                        </button>
+                        <button class="action-card" data-action="generar-reporte">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Generar Reporte</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Mascotas -->
+            <section id="section-mascotas" class="content-section">
+                <div class="section-header">
+                    <h2>Gestión de Mascotas</h2>
+                    <button class="btn-primary" id="btn-agregar-mascota">
+                        <i class="fas fa-plus"></i>
+                        Agregar Mascota
+                    </button>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label>Estado:</label>
+                        <select class="filter-select">
+                            <option value="todas">Todas</option>
+                            <option value="disponible">Disponibles</option>
+                            <option value="adoptada">Adoptadas</option>
+                            <option value="tratamiento">En Tratamiento</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tipo:</label>
+                        <select class="filter-select">
+                            <option value="todos">Todos</option>
+                            <option value="perro">Perros</option>
+                            <option value="gato">Gatos</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" placeholder="Buscar por nombre..." class="search-input">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <!-- Grid de mascotas -->
+                <div class="mascotas-grid">
+                    <!-- Mascota 1 -->
+                    <div class="mascota-admin-card">
+                        <div class="mascota-admin-image">
+                            <img src../assets/images/perro.png" alt="Max">
+                            <div class="mascota-status disponible">Disponible</div>
+                        </div>
+                        <div class="mascota-admin-info">
+                            <h4>Max</h4>
+                            <p class="mascota-details">Labrador • 2 años • Macho</p>
+                            <div class="mascota-stats">
+                                <span><i class="fas fa-eye"></i> 156 vistas</span>
+                                <span><i class="fas fa-heart"></i> 23 interesados</span>
+                            </div>
+                            <div class="mascota-actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-view" title="Ver perfil">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-share" title="Compartir">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="btn-delete" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mascota 2 -->
+                    <div class="mascota-admin-card">
+                        <div class="mascota-admin-image">
+                            <img src="../assets/images/gata.jpg" alt="Luna">
+                            <div class="mascota-status adoptada">Adoptada</div>
+                        </div>
+                        <div class="mascota-admin-info">
+                            <h4>Luna</h4>
+                            <p class="mascota-details">Gata Mestiza • 1 año • Hembra</p>
+                            <div class="mascota-stats">
+                                <span><i class="fas fa-eye"></i> 89 vistas</span>
+                                <span><i class="fas fa-calendar"></i> Adoptada 15/09</span>
+                            </div>
+                            <div class="mascota-actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-view" title="Ver perfil">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-follow" title="Seguimiento">
+                                    <i class="fas fa-user-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mascota 3 -->
+                    <div class="mascota-admin-card">
+                        <div class="mascota-admin-image">
+                            <img src="../assets/images/perro2.webp" alt="Rocky">
+                            <div class="mascota-status tratamiento">En Tratamiento</div>
+                        </div>
+                        <div class="mascota-admin-info">
+                            <h4>Rocky</h4>
+                            <p class="mascota-details">Pastor Alemán • 3 años • Macho</p>
+                            <div class="mascota-stats">
+                                <span><i class="fas fa-eye"></i> 234 vistas</span>
+                                <span><i class="fas fa-heart"></i> 45 interesados</span>
+                            </div>
+                            <div class="mascota-actions">
+                                <button class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-view" title="Ver perfil">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-medical" title="Historial médico">
+                                    <i class="fas fa-notes-medical"></i>
+                                </button>
+                                <button class="btn-share" title="Compartir">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Adopciones -->
+            <section id="section-adopciones" class="content-section">
+                <div class="section-header">
+                    <h2>Gestión de Adopciones</h2>
+                    <div class="adoption-filters">
+                        <button class="filter-btn active">Todos (15)</button>
+                        <button class="filter-btn">Pendientes (7)</button>
+                        <button class="filter-btn">Aprobadas (5)</button>
+                        <button class="filter-btn">Completadas (3)</button>
+                    </div>
+                </div>
+
+                <div class="adopciones-table">
+                    <div class="table-header">
+                        <div class="table-row">
+                            <div class="table-cell">Mascota</div>
+                            <div class="table-cell">Adoptante</div>
+                            <div class="table-cell">Fecha</div>
+                            <div class="table-cell">Estado</div>
+                            <div class="table-cell">Acciones</div>
+                        </div>
+                    </div>
+                    <div class="table-body">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="mascota-mini">
+                                    <img src="../assets/images/perro.png" alt="Max">
+                                    <span>Max</span>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="adoptante-info">
+                                    <strong>Carlos Ruiz</strong>
+                                    <small>carlos@email.com</small>
+                                </div>
+                            </div>
+                            <div class="table-cell">22/09/2025</div>
+                            <div class="table-cell">
+                                <span class="status-badge pendiente">Pendiente</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="table-actions">
+                                    <button class="btn-table-action approve" title="Aprobar">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-table-action reject" title="Rechazar">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <button class="btn-table-action view" title="Ver detalles">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Más filas... -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Las demás secciones se cargarían dinámicamente -->
+        </main>
+    </div>
+
+    <!-- Modales -->
+    <div id="modal-nueva-mascota" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar Nueva Mascota</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-nueva-mascota">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nombre *</label>
+                            <input type="text" required placeholder="Nombre de la mascota">
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo *</label>
+                            <select required>
+                                <option value="">Seleccionar</option>
+                                <option value="perro">Perro</option>
+                                <option value="gato">Gato</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Edad</label>
+                            <input type="number" placeholder="Edad en años">
+                        </div>
+                        <div class="form-group">
+                            <label>Peso</label>
+                            <input type="number" placeholder="Peso en kg">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Raza</label>
+                            <input type="text" placeholder="Raza o mezcla">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Descripción</label>
+                            <textarea rows="3" placeholder="Personalidad, características especiales..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Fotos</label>
+                            <div class="file-upload">
+                                <input type="file" multiple accept="image/*">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Arrastra fotos aquí o haz clic para seleccionar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary">Cancelar</button>
+                        <button type="submit" class="btn-primary">Guardar Mascota</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <!-- Script Unificador PETHOUSE -->
+    <script src="pethouse-unificador.js"></script>
+</body>
+</html>

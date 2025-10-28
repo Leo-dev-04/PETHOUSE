@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Gestión de Productos | PETHOUSE</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Gestiona los productos de tu organización en el marketplace PETHOUSE. Sube, edita y administra tus productos para generar ingresos adicionales.">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../marketplace-admin.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <i class="fas fa-paw"></i>
+                    <span>PETHOUSE</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item">Inicio</a></li>
+                <li><a href="dashboard.html" class="nav-item">Dashboard</a></li>
+                <li><a href="mi-tienda.html" class="nav-item active">Mi Tienda</a></li>
+                <li><a href="servicios.html" class="nav-item">Servicios</a></li>
+                <li><a href="contacto.html" class="nav-item">Contacto</a></li>
+            </ul>
+            
+            <div class="nav-auth">
+                <a href="login.html" class="auth-link">
+                    <i class="fas fa-user"></i>
+                    Cuenta
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+        <!-- Header -->
+        <div class="page-header" style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">
+                <i class="fas fa-store" style="color: #667eea;"></i>
+                Mi Tienda en PETHOUSE
+            </h1>
+            <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto;">
+                Gestiona tus productos en el marketplace y genera ingresos adicionales para tu organización
+            </p>
+        </div>
+
+        <!-- Stats Rápidas -->
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="stat-card" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 2rem; border-radius: 16px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;" id="totalProductos">0</div>
+                <div style="opacity: 0.9;">Productos Activos</div>
+            </div>
+            
+            <div class="stat-card" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 2rem; border-radius: 16px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;" id="ventasMes">$0</div>
+                <div style="opacity: 0.9;">Ventas del Mes</div>
+            </div>
+            
+            <div class="stat-card" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2rem; border-radius: 16px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;" id="stockBajo">0</div>
+                <div style="opacity: 0.9;">Stock Bajo</div>
+            </div>
+        </div>
+
+        <!-- Acciones Principales -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <h2 style="margin: 0; color: #1e293b; display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="fas fa-shopping-bag" style="color: #667eea;"></i>
+                    Mis Productos
+                </h2>
+                <p style="margin: 0.5rem 0 0 0; color: #64748b;">Administra tu catálogo de productos</p>
+            </div>
+            
+            <button id="nuevoProductoBtn" class="btn btn-primary" style="white-space: nowrap;">
+                <i class="fas fa-plus"></i>
+                Nuevo Producto
+            </button>
+        </div>
+
+        <!-- Filtros Rápidos -->
+        <div class="filtros-rapidos" style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; align-items: end;">
+                <div>
+                    <label for="buscarProducto" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">
+                        <i class="fas fa-search"></i> Buscar
+                    </label>
+                    <input type="text" id="buscarProducto" placeholder="Nombre del producto..." class="form-control">
+                </div>
+                
+                <div>
+                    <label for="filtroCategoriaTienda" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">
+                        <i class="fas fa-tag"></i> Categoría
+                    </label>
+                    <select id="filtroCategoriaTienda" class="form-control">
+                        <option value="">Todas</option>
+                        <option value="alimentacion">Alimentación</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="juguetes">Juguetes</option>
+                        <option value="higiene">Higiene</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="filtroEstatusTienda" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">
+                        <i class="fas fa-circle"></i> Estado
+                    </label>
+                    <select id="filtroEstatusTienda" class="form-control">
+                        <option value="">Todos</option>
+                        <option value="activo">Activos</option>
+                        <option value="pausado">Pausados</option>
+                        <option value="agotado">Sin Stock</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem;">
+                    <button id="aplicarFiltrosTienda" class="btn btn-primary">
+                        <i class="fas fa-filter"></i>
+                        Filtrar
+                    </button>
+                    <button id="limpiarFiltrosTienda" class="btn btn-secondary">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Productos -->
+        <div id="misProductosContainer" style="display: grid; gap: 1rem;">
+            <!-- Los productos se cargarán aquí -->
+        </div>
+        
+        <!-- Estado vacío -->
+        <div id="estadoVacio" style="display: none; text-align: center; padding: 4rem 2rem; color: #64748b;">
+            <i class="fas fa-shopping-bag" style="font-size: 4rem; opacity: 0.3; margin-bottom: 1.5rem;"></i>
+            <h3 style="margin-bottom: 1rem;">¡Comienza a vender!</h3>
+            <p style="margin-bottom: 2rem;">Aún no tienes productos en tu tienda. Agrega tu primer producto para empezar a generar ingresos.</p>
+            <button onclick="abrirModalProducto()" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Agregar Mi Primer Producto
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Producto (reutilizamos el mismo del admin) -->
+    <div id="modalProducto" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitulo"><i class="fas fa-plus"></i> Nuevo Producto</h3>
+                <button id="cerrarModal" class="btn-close">&times;</button>
+            </div>
+            
+            <form id="formProducto">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                    <div>
+                        <label for="nombreProducto">
+                            <i class="fas fa-tag"></i> Nombre del Producto *
+                        </label>
+                        <input type="text" id="nombreProducto" name="nombre" required class="form-control" placeholder="Ej: Collar antipulgas para perro">
+                    </div>
+                    
+                    <div>
+                        <label for="precioProducto">
+                            <i class="fas fa-dollar-sign"></i> Precio (MXN) *
+                        </label>
+                        <input type="number" id="precioProducto" name="precio" required class="form-control" min="1" step="0.01" placeholder="299.99">
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label for="categoriaProducto">
+                            <i class="fas fa-list"></i> Categoría *
+                        </label>
+                        <select id="categoriaProducto" name="categoria" required class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="accesorios">Accesorios</option>
+                            <option value="juguetes">Juguetes</option>
+                            <option value="higiene">Higiene</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="animalProducto">
+                            <i class="fas fa-paw"></i> Para *
+                        </label>
+                        <select id="animalProducto" name="animal" required class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="perros">Perros</option>
+                            <option value="gatos">Gatos</option>
+                            <option value="ambos">Ambos</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="tamañoProducto">
+                            <i class="fas fa-ruler"></i> Tamaño
+                        </label>
+                        <select id="tamañoProducto" name="tamaño" class="form-control">
+                            <option value="">No aplica</option>
+                            <option value="pequeño">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="descripcionProducto">
+                        <i class="fas fa-align-left"></i> Descripción *
+                    </label>
+                    <textarea id="descripcionProducto" name="descripcion" required class="form-control" rows="3" placeholder="Describe las características y beneficios del producto..."></textarea>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label for="stockProducto">
+                            <i class="fas fa-boxes"></i> Stock Disponible
+                        </label>
+                        <input type="number" id="stockProducto" name="stock" class="form-control" min="0" value="1">
+                    </div>
+                    
+                    <div>
+                        <label for="imagenProducto">
+                            <i class="fas fa-image"></i> URL de Imagen
+                        </label>
+                        <input type="url" id="imagenProducto" name="imagen" class="form-control" placeholder="https://ejemplo.com/imagen.jpg">
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" id="cancelarProducto" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../mi-tienda.js"></script>
+</body>
+</html>

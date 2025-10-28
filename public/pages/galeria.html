@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Mascotas - PETHOUSE</title>
+    <meta name="description" content="Explora nuestra galería de mascotas disponibles para adopción en PETHOUSE.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../galeria.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/LOGO.jpg">
+</head>
+<body class="galeria-page">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">🐾</div>
+                <h1 class="brand-name">PETHOUSE</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="adopciones.html" class="nav-link"><i class="fas fa-heart"></i> Adopciones</a>
+                <a href="galeria.html" class="nav-link active"><i class="fas fa-images"></i> Mascotas</a>
+                <a href="servicios.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                <a href="nosotros.html" class="nav-link"><i class="fas fa-info-circle"></i> Nosotros</a>
+                <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                <a href="tienda.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Tienda</a>
+                <a href="login.html" class="nav-link login-btn"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="galeria-hero">
+        <div class="galeria-hero-container">
+            <h1 class="galeria-hero-title">
+                Conoce a Nuestras <span class="highlight">Mascotas</span>
+            </h1>
+            <p class="galeria-hero-subtitle">
+                Explora nuestra galería visual y encuentra a tu compañero perfecto. Cada mascota tiene una historia única.
+            </p>
+            <div class="galeria-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-mascotas">14</span>
+                    <span class="stat-label">Mascotas en Galería</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Tipos de Animales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Adopciones Exitosas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="galeria-filtros">
+        <div class="filtros-container">
+            <div class="filtros-content">
+                <h3 class="filtros-title">
+                    <i class="fas fa-filter"></i>
+                    Filtrar Mascotas
+                </h3>
+                <div class="filtros-grid">
+                    <button class="filtro-btn active" data-tipo="todos">
+                        <i class="fas fa-th"></i> Todos
+                    </button>
+                    <button class="filtro-btn" data-tipo="perro">
+                        <i class="fas fa-dog"></i> Perros
+                    </button>
+                    <button class="filtro-btn" data-tipo="gato">
+                        <i class="fas fa-cat"></i> Gatos
+                    </button>
+                    <button class="filtro-btn" data-tipo="conejo">
+                        <i class="fas fa-rabbit"></i> Conejos
+                    </button>
+                    <button class="filtro-btn" data-tipo="otros">
+                        <i class="fas fa-paw"></i> Otros
+                    </button>
+                </div>
+                <div class="filtros-extra">
+                    <div class="buscar-group">
+                        <div class="buscar-input-container">
+                            <i class="fas fa-search buscar-icon"></i>
+                            <input type="text" id="buscar-mascota" placeholder="Buscar por nombre..." class="buscar-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Principal -->
+    <main class="galeria-principal">
+        <div class="galeria-container">
+            <div class="resultados-info">
+                <div class="resultados-contador">
+                    <span id="resultados-actuales">14</span> mascotas encontradas
+                </div>
+            </div>
+
+            <!-- Grid de Mascotas -->
+            <div class="mascotas-grid" id="mascotas-grid">
+                <!-- Las mascotas se cargarán aquí -->
+            </div>
+
+            <!-- Loading -->
+            <div class="loading-state" id="loading-state">
+                <div class="loading-spinner">
+                    <i class="fas fa-paw fa-spin"></i>
+                </div>
+                <p>Cargando mascotas...</p>
+            </div>
+
+            <!-- Sin resultados -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>No se encontraron mascotas</h3>
+                <p>Intenta ajustar los filtros para encontrar más opciones</p>
+                <button class="btn-reset-filtros" onclick="resetearFiltros()">
+                    <i class="fas fa-refresh"></i> Limpiar Filtros
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-mascota" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido del modal -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="galeria-cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>¿Encontraste a tu Compañero Ideal?</h2>
+                <p>Comienza el proceso de adopción oficial y conoce más detalles</p>
+                <div class="cta-actions">
+                    <a href="adopciones.html" class="btn-cta-primary">
+                        <i class="fas fa-heart"></i> Ver Proceso de Adopción
+                    </a>
+                    <a href="contacto.html" class="btn-cta-secondary">
+                        <i class="fas fa-phone"></i> Contactar Asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo">🐾</span>
+                        <span class="brand-name">PETHOUSE</span>
+                    </div>
+                    <p>Conectando corazones con patitas desde 2022</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Adopciones</h4>
+                        <a href="adopciones.html">Ver Mascotas</a>
+                        <a href="galeria.html">Galería</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <a href="servicios.html">Veterinaria</a>
+                        <a href="servicios.html">Cuidado</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PETHOUSE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/7461301992?text=Hola%20PETHOUSE,%20me%20interesa%20adoptar" 
+            target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">¿Necesitas ayuda?</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../pethouse-master.js"></script>
+    <script src="../galeria.js"></script>
+</body>
+</html>

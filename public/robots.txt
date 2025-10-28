@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pethouse.com/sitemap.xml
+
+# Disallow admin pages if they exist
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+
+# Allow images and assets
+Allow: /assets/
+Allow: /images/
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.gif
+Allow: *.svg
+
+# Crawl-delay for politeness
+Crawl-delay: 1

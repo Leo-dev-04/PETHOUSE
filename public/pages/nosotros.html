@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - PETHOUSE | Rescatando Vidas, Creando Familias</title>
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Conoce la historia de PETHOUSE, nuestro equipo apasionado y nuestra misión de rescatar y rehabilitar animales en México. Más de 250 vidas salvadas y contando.">
+    <meta name="keywords" content="PETHOUSE, rescate animal, adopción mascotas, veterinarios México, refugio animales, equipo PETHOUSE">
+    <meta name="author" content="PETHOUSE">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sobre Nosotros - PETHOUSE">
+    <meta property="og:description" content="Conoce nuestra historia de rescate y amor hacia los animales. Más de 250 vidas salvadas en México.">
+    <meta property="og:image" content="../assets/images/LOGO.jpg">
+    <meta property="og:url" content="/pages/nosotros.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sobre Nosotros - PETHOUSE">
+    <meta name="twitter:description" content="Conoce nuestra historia de rescate y amor hacia los animales">
+    <meta name="twitter:image" content="../assets/images/LOGO.jpg">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../performance.css">
+    <link rel="stylesheet" href="../alertas-modales.css">
+    <link rel="stylesheet" href="../nosotros-moderno.css">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/LOGO.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/LOGO.jpg">
+    
+    <!-- Precargas críticas -->
+    <link rel="preload" href="../assets/images/LOGO.jpg" as="image">
+    <link rel="preload" href="../assets/images/inicio.jpeg" as="image">
+</head>
+
+<body>
+    <div class="nosotros-container">
+        <!-- Navegación principal -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-link">
+                        <i class="fas fa-paw"></i>
+                        <span>PETHOUSE</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="adopciones.html" class="nav-item">Adopciones</a></li>
+                    <li><a href="galeria.html" class="nav-item">Galería</a></li>
+                    <li><a href="tienda.html" class="nav-item">Tienda</a></li>
+                    <li><a href="servicios.html" class="nav-item">Servicios</a></li>
+                    <li><a href="nosotros.html" class="nav-item active">Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav-item">Contacto</a></li>
+                </ul>
+                
+                <div class="nav-auth">
+                    <a href="login.html" class="auth-link">
+                        <i class="fas fa-user"></i>
+                        Cuenta
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-nosotros">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <img src="../assets/images/adopta.jpg" alt="PETHOUSE - Nuestra historia" class="hero-bg-image">
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-heart"></i>
+                        Nuestra Historia
+                    </span>
+                    <h1 class="hero-title">
+                        Rescatando Vidas,<br>
+                        <span class="gradient-text">Creando Familias</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Desde 2022, PETHOUSE ha sido el hogar temporal de más de 250 animales rescatados, 
+                        conectando corazones y transformando vidas en todo México.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-number">250+</span>
+                            <span class="stat-label">Vidas Salvadas</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">180+</span>
+                            <span class="stat-label">Familias Felices</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Años de Amor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Conoce nuestra historia</span>
+            </div>
+        </section>
+
+        <!-- Misión, Visión y Valores -->
+        <section class="mvv-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Lo que nos mueve</span>
+                    <h2 class="section-title">Nuestra Esencia</h2>
+                    <p class="section-subtitle">
+                        Los principios que guían cada decisión y acción en PETHOUSE
+                    </p>
+                </div>
+                
+                <div class="mvv-grid">
+                    <div class="mvv-card mission">
+                        <div class="mvv-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="mvv-content">
+                            <h3>Nuestra Misión</h3>
+                            <p>
+                                Rescatar, rehabilitar y encontrar hogares amorosos para animales en situación de abandono, 
+                                brindándoles una segunda oportunidad de vida digna mientras educamos a la comunidad sobre 
+                                la tenencia responsable de mascotas.
+                            </p>
+                        </div>
+                        <div class="mvv-decoration">
+                            <div class="decoration-circle"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mvv-card vision">
+                        <div class="mvv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="mvv-content">
+                            <h3>Nuestra Visión</h3>
+                            <p>
+                                Ser el refugio de referencia en México, liderando un movimiento nacional donde ningún animal 
+                                sufra abandono y cada mascota encuentre una familia que la valore, proteja y ame 
+                                incondicionalmente.
+                            </p>
+                        </div>
+                        <div class="mvv-decoration">
+                            <div class="decoration-circle"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mvv-card values">
+                        <div class="mvv-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="mvv-content">
+                            <h3>Nuestros Valores</h3>
+                            <div class="values-list">
+                                <div class="value-item">
+                                    <i class="fas fa-heart-pulse"></i>
+                                    <span>Compasión y respeto por toda vida</span>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Transparencia total en operaciones</span>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Responsabilidad social y ambiental</span>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-shield-heart"></i>
+                                    <span>Compromiso inquebrantable</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mvv-decoration">
+                            <div class="decoration-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline de nuestra historia -->
+        <section class="timeline-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Nuestro camino</span>
+                    <h2 class="section-title">Historia de PETHOUSE</h2>
+                    <p class="section-subtitle">
+                        Cada paso en nuestro viaje hacia un México más compasivo con los animales
+                    </p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2022">
+                        <div class="timeline-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Los Inicios</h4>
+                            <p>Fundación de PETHOUSE en el Instituto Tecnológico Superior de Chicontepec. Primeros 15 rescates exitosos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2023">
+                        <div class="timeline-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Expansión del Refugio</h4>
+                            <p>Construcción de instalaciones modernas. Llegamos a 100 adopciones exitosas y formamos nuestro equipo profesional.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Reconocimiento</h4>
+                            <p>Certificación como refugio oficial. Lanzamiento de programas educativos y 180+ familias felices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Hacia el Futuro</h4>
+                            <p>Plataforma digital moderna, tienda solidaria y expansión a más estados de México.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestro Equipo -->
+        <section class="team-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Nuestros héroes</span>
+                    <h2 class="section-title">El Corazón de PETHOUSE</h2>
+                    <p class="section-subtitle">
+                        Profesionales apasionados unidos por el amor hacia los animales
+                    </p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card founder">
+                        <div class="team-avatar">
+                            <div class="avatar-image">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="avatar-status">Fundador</div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Leo González</h4>
+                            <p class="team-role">Fundador y Director General</p>
+                            <p class="team-description">
+                                Visionario detrás de PETHOUSE. Con formación en ingeniería y un corazón dedicado 
+                                a los animales, Leo lidera nuestra misión de crear un mundo más compasivo.
+                            </p>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Años liderando</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">250+</span>
+                                    <span class="stat-label">Vidas impactadas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-decoration">
+                            <div class="decoration-paw">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                            <div class="team-card documentation">
+                            <div class="team-avatar">
+                                <div class="avatar-image">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="avatar-status">Documentación</div>
+                            </div>
+                            <div class="team-info">
+                                <h4>Axel Ariel Marcos</h4>
+                                <p class="team-role">Encargado de Documentación</p>
+                                <p class="team-description">
+                                    Responsable de la elaboración y organización de toda la documentación técnica y administrativa del proyecto.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-card research">
+                            <div class="team-avatar">
+                                <div class="avatar-image">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="avatar-status">Investigación</div>
+                            </div>
+                            <div class="team-info">
+                                <h4>Ismael Hernandez Cruz</h4>
+                                <p class="team-role">Investigador Principal</p>
+                                <p class="team-description">
+                                    Encargado de la investigación de campo y análisis de datos para mejorar los procesos y resultados del refugio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-card social">
+                            <div class="team-avatar">
+                                <div class="avatar-image">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="avatar-status">Redes Sociales</div>
+                            </div>
+                            <div class="team-info">
+                                <h4>Luis Enrique</h4>
+                                <p class="team-role">Gestor de Redes Sociales</p>
+                                <p class="team-description">
+                                    Responsable de la comunicación digital, difusión y manejo de las redes sociales del proyecto PETHOUSE.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="team-card costs">
+                            <div class="team-avatar">
+                                <div class="avatar-image">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="avatar-status">Costos</div>
+                            </div>
+                            <div class="team-info">
+                                <h4>Luz Maria Cortes</h4>
+                                <p class="team-role">Encargada de Costos del Personal</p>
+                                <p class="team-description">
+                                    Supervisó la gestión y cálculo de los costos asociados al personal y recursos humanos del refugio.
+                                </p>
+                            </div>
+                        </div>
+
+                    <div class="team-card veterinarian">
+                        <div class="team-avatar">
+                            <div class="avatar-image">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="avatar-status">Veterinaria</div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Dra. María González</h4>
+                            <p class="team-role">Veterinaria Jefe</p>
+                            <p class="team-description">
+                                Especialista en medicina veterinaria con 8 años de experiencia. Lidera nuestro 
+                                equipo médico asegurando la salud y bienestar de cada rescatado.
+                            </p>
+                            <div class="team-specialties">
+                                <span class="specialty">Cirugía</span>
+                                <span class="specialty">Rehabilitación</span>
+                                <span class="specialty">Medicina Preventiva</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card rescue">
+                        <div class="team-avatar">
+                            <div class="avatar-image">
+                                <i class="fas fa-truck-medical"></i>
+                            </div>
+                            <div class="avatar-status">Rescatista</div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Carlos Mendoza</h4>
+                            <p class="team-role">Coordinador de Rescates</p>
+                            <p class="team-description">
+                                Héroe en primera línea, especializado en rescates de emergencia y rehabilitación 
+                                conductual. Su dedicación ha salvado más de 100 vidas.
+                            </p>
+                            <div class="team-achievements">
+                                <div class="achievement">
+                                    <i class="fas fa-medal"></i>
+                                    <span>Rescatista del Año 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card adoption">
+                        <div class="team-avatar">
+                            <div class="avatar-image">
+                                <i class="fas fa-heart-handshake"></i>
+                            </div>
+                            <div class="avatar-status">Adopciones</div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Ana Rodríguez</h4>
+                            <p class="team-role">Coordinadora de Adopciones</p>
+                            <p class="team-description">
+                                Experta en crear conexiones perfectas entre familias y mascotas. Su intuición ha 
+                                logrado un 95% de éxito en adopciones permanentes.
+                            </p>
+                            <div class="team-success-rate">
+                                <div class="success-circle">
+                                    <span>95%</span>
+                                </div>
+                                <span>Éxito en adopciones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impacto y estadísticas -->
+        <section class="impact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Nuestro legado</span>
+                    <h2 class="section-title">Impacto Real</h2>
+                    <p class="section-subtitle">
+                        Números que representan vidas transformadas y familias creadas
+                    </p>
+                </div>
+                
+                <div class="impact-grid">
+                    <div class="impact-card primary">
+                        <div class="impact-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="impact-number" data-count="250">0</div>
+                        <div class="impact-label">Animales Rescatados</div>
+                        <div class="impact-description">
+                            Desde perros abandonados hasta gatos heridos, cada vida cuenta
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card success">
+                        <div class="impact-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="impact-number" data-count="180">0</div>
+                        <div class="impact-label">Adopciones Exitosas</div>
+                        <div class="impact-description">
+                            Familias felices con sus nuevos compañeros de vida
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card medical">
+                        <div class="impact-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="impact-number" data-count="500">0</div>
+                        <div class="impact-label">Tratamientos Médicos</div>
+                        <div class="impact-description">
+                            Vacunas, cirugías y rehabilitaciones completas
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card community">
+                        <div class="impact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="impact-number" data-count="95">0</div>
+                        <div class="impact-label">% Tasa de Éxito</div>
+                        <div class="impact-description">
+                            En adopciones permanentes y felices
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-quote">
+                    <blockquote>
+                        "Cada animal que rescatamos no solo encuentra un hogar, sino que enseña a una familia 
+                        el verdadero significado del amor incondicional."
+                        <cite>— Leo González, Fundador de PETHOUSE</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestras instalaciones -->
+        <section class="facilities-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Nuestro hogar</span>
+                    <h2 class="section-title">Instalaciones de Primera</h2>
+                    <p class="section-subtitle">
+                        Un refugio diseñado con amor, equipado con tecnología de vanguardia
+                    </p>
+                </div>
+                
+                <div class="facilities-content">
+                    <div class="facilities-grid">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h4>Clínica Veterinaria</h4>
+                            <p>Quirófano equipado, sala de recuperación y farmacia completa</p>
+                            <div class="facility-features">
+                                <span>Quirófano estéril</span>
+                                <span>Rayos X</span>
+                                <span>Laboratorio</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <h4>Áreas de Descanso</h4>
+                            <p>Espacios climatizados diseñados para el máximo comfort</p>
+                            <div class="facility-features">
+                                <span>Climatizadas</span>
+                                <span>Insonorizadas</span>
+                                <span>Hipoalergénicas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <h4>Zonas de Ejercicio</h4>
+                            <p>Amplios patios de juego seguros para rehabilitación física</p>
+                            <div class="facility-features">
+                                <span>Césped natural</span>
+                                <span>Equipos de juego</span>
+                                <span>Circuitos de entrenamiento</span>
+                            </div>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-shower"></i>
+                            </div>
+                            <h4>Spa y Grooming</h4>
+                            <p>Servicios de belleza y cuidado personal para nuestros rescatados</p>
+                            <div class="facility-features">
+                                <span>Bañeras especializadas</span>
+                                <span>Secadores profesionales</span>
+                                <span>Mesa de grooming</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="facilities-showcase">
+                        <div class="showcase-image">
+                            <img src="../assets/images/2.jpg" alt="Instalaciones PETHOUSE" loading="lazy">
+                            <div class="showcase-overlay">
+                                <button class="virtual-tour-btn" onclick="mostrarTourVirtual()">
+                                    <i class="fas fa-vr-cardboard"></i>
+                                    Tour Virtual 360°
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="facilities-info">
+                            <h3>Ubicación Estratégica</h3>
+                            <p>
+                                Situados en el corazón del Instituto Tecnológico Superior de Chicontepec, Veracruz, 
+                                nuestras instalaciones se extienden sobre 2,000 m² de terreno especialmente adaptado 
+                                para el bienestar animal.
+                            </p>
+                            
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <strong>Dirección</strong>
+                                        <span>Instituto Tecnológico Superior de Chicontepec, Veracruz</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Horarios de Visita</strong>
+                                        <span>Lunes a Domingo: 9:00 AM - 6:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <strong>Certificaciones</strong>
+                                        <span>Refugio Oficial • Normas de Bienestar Animal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Final -->
+        <section class="cta-section">
+            <div class="cta-background">
+                <div class="cta-overlay"></div>
+            </div>
+            
+            <div class="section-container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <h2>¿Listo para Cambiar una Vida?</h2>
+                        <p>
+                            Únete a nuestra misión y sé parte de la historia de amor más grande de México. 
+                            Cada acción cuenta, cada vida importa.
+                        </p>
+                    </div>
+                    
+                    <div class="cta-actions">
+                        <a href="adopciones.html" class="cta-btn primary">
+                            <i class="fas fa-heart"></i>
+                            <span>Adoptar una Mascota</span>
+                        </a>
+                        <a href="contacto.html" class="cta-btn secondary">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Ser Voluntario</span>
+                        </a>
+                        <a href="tienda.html" class="cta-btn tertiary">
+                            <i class="fas fa-gift"></i>
+                            <span>Hacer Donación</span>
+                        </a>
+                    </div>
+                    
+                    <div class="cta-stats">
+                        <div class="cta-stat">
+                            <span class="stat-number">250+</span>
+                            <span class="stat-label">Vidas esperando</span>
+                        </div>
+                        <div class="cta-stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Compromiso</span>
+                        </div>
+                        <div class="cta-stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Amor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts principales -->
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+    <script src="../nosotros-moderno.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción Express IA - PETHOUSE | Encuentra tu Match Perfecto</title>
+    <meta name="description" content="Usa nuestra IA avanzada para encontrar tu mascota ideal en minutos. Algoritmo de compatibilidad con 95% de éxito en adopciones.">
+    
+    <!-- CSS Unificado -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../adopciones-moderno.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navegación principal -->
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <i class="fas fa-paw"></i>
+                    <span>PETHOUSE</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-item">Inicio</a></li>
+                <li><a href="adopciones.html" class="nav-item">Adopciones</a></li>
+                <li><a href="adopcion-express.html" class="nav-item active">IA Express</a></li>
+                <li><a href="galeria.html" class="nav-item">Galería</a></li>
+                <li><a href="tienda.html" class="nav-item">Tienda</a></li>
+                <li><a href="servicios.html" class="nav-item">Servicios</a></li>
+            </ul>
+            
+            <div class="nav-auth">
+                <a href="login.html" class="auth-link">
+                    <i class="fas fa-user"></i>
+                    Cuenta
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="ai-express-container">
+        <!-- Hero Section -->
+        <section class="hero-simple">
+            <div class="hero-content">
+                <h1>🤖 Adopción Express con IA</h1>
+                <p>Nuestro algoritmo inteligente encuentra la mascota perfecta para ti en minutos. Con 95% de éxito en adopciones.</p>
+            </div>
+        </section>
+
+        <!-- AI Wizard -->
+        <div class="ai-wizard">
+            <div class="wizard-header">
+                <h2>Encuentra tu Compañero Perfecto</h2>
+                <p>Responde unas preguntas y nuestra IA hará el resto</p>
+                
+                <div class="wizard-progress">
+                    <div class="progress-step active" data-step="1">1</div>
+                    <div class="progress-step" data-step="2">2</div>
+                    <div class="progress-step" data-step="3">3</div>
+                    <div class="progress-step" data-step="4">4</div>
+                    <div class="progress-step" data-step="5">🎯</div>
+                </div>
+            </div>
+
+            <!-- Paso 1: Preferencia de mascota -->
+            <div class="wizard-step active" data-step="1">
+                <div class="question-container">
+                    <h3 class="question-title">¿Qué tipo de mascota buscas?</h3>
+                    <p class="question-subtitle">Selecciona tu preferencia principal</p>
+                    
+                    <div class="options-grid">
+                        <div class="option-card" data-value="perro">
+                            <div class="option-icon">🐕</div>
+                            <div class="option-title">Perro</div>
+                            <p>Compañero leal y activo</p>
+                        </div>
+                        <div class="option-card" data-value="gato">
+                            <div class="option-icon">🐱</div>
+                            <div class="option-title">Gato</div>
+                            <p>Independiente y cariñoso</p>
+                        </div>
+                        <div class="option-card" data-value="cualquiera">
+                            <div class="option-icon">❤️</div>
+                            <div class="option-title">No importa</div>
+                            <p>Abierto a cualquier tipo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2: Estilo de vida -->
+            <div class="wizard-step" data-step="2">
+                <div class="question-container">
+                    <h3 class="question-title">¿Cómo describes tu estilo de vida?</h3>
+                    <p class="question-subtitle">Esto nos ayuda a encontrar una mascota compatible</p>
+                    
+                    <div class="options-grid">
+                        <div class="option-card" data-value="muy-activo">
+                            <div class="option-icon">🏃‍♂️</div>
+                            <div class="option-title">Muy Activo</div>
+                            <p>Ejercicio diario, aventuras</p>
+                        </div>
+                        <div class="option-card" data-value="moderado">
+                            <div class="option-icon">🚶‍♂️</div>
+                            <div class="option-title">Moderado</div>
+                            <p>Paseos regulares, tiempo en casa</p>
+                        </div>
+                        <div class="option-card" data-value="tranquilo">
+                            <div class="option-icon">🛋️</div>
+                            <div class="option-title">Tranquilo</div>
+                            <p>Relajado, tiempo en casa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3: Experiencia -->
+            <div class="wizard-step" data-step="3">
+                <div class="question-container">
+                    <h3 class="question-title">¿Cuál es tu experiencia con mascotas?</h3>
+                    <p class="question-subtitle">Esto determina qué mascotas serían ideales para ti</p>
+                    
+                    <div class="options-grid">
+                        <div class="option-card" data-value="principiante">
+                            <div class="option-icon">🌱</div>
+                            <div class="option-title">Principiante</div>
+                            <p>Primera vez con mascota</p>
+                        </div>
+                        <div class="option-card" data-value="intermedio">
+                            <div class="option-icon">🌿</div>
+                            <div class="option-title">Intermedio</div>
+                            <p>Algo de experiencia previa</p>
+                        </div>
+                        <div class="option-card" data-value="experto">
+                            <div class="option-icon">🌳</div>
+                            <div class="option-title">Experto</div>
+                            <p>Mucha experiencia y conocimiento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4: Situación del hogar -->
+            <div class="wizard-step" data-step="4">
+                <div class="question-container">
+                    <h3 class="question-title">¿Cómo es tu hogar?</h3>
+                    <p class="question-subtitle">El espacio disponible es importante para el bienestar</p>
+                    
+                    <div class="options-grid">
+                        <div class="option-card" data-value="apartamento">
+                            <div class="option-icon">🏢</div>
+                            <div class="option-title">Apartamento</div>
+                            <p>Espacio interior limitado</p>
+                        </div>
+                        <div class="option-card" data-value="casa-patio">
+                            <div class="option-icon">🏠</div>
+                            <div class="option-title">Casa con Patio</div>
+                            <p>Espacio interior y exterior</p>
+                        </div>
+                        <div class="option-card" data-value="finca">
+                            <div class="option-icon">🌾</div>
+                            <div class="option-title">Finca/Campo</div>
+                            <p>Mucho espacio libre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5: Resultados -->
+            <div class="wizard-step" data-step="5">
+                <div class="results-container">
+                    <div class="loading-animation">
+                        <div class="loading-spinner"></div>
+                        <h3>🧠 IA Analizando tu Perfil...</h3>
+                        <p>Evaluando compatibilidad con +200 mascotas disponibles</p>
+                    </div>
+
+                    <div class="ai-results">
+                        <div class="match-score">
+                            <h3>¡Matches Encontrados!</h3>
+                            <div class="score-number">95%</div>
+                            <p>Compatibilidad promedio con tus mejores matches</p>
+                        </div>
+
+                        <h3>Tus Mascotas Ideales:</h3>
+                        <div class="pet-matches" id="ai-matches">
+                            <!-- Los resultados se cargarán aquí dinámicamente -->
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <a href="adopciones.html" class="btn-service">
+                                <i class="fas fa-heart"></i>
+                                Ver Todas las Mascotas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="wizard-navigation">
+                <button class="btn-wizard secondary" id="prev-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Anterior
+                </button>
+                
+                <div>
+                    <span id="step-counter">Paso 1 de 4</span>
+                </div>
+                
+                <button class="btn-wizard primary" id="next-btn" disabled>
+                    Siguiente
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Estado del wizard
+        let currentStep = 1;
+        let userAnswers = {};
+        const totalSteps = 4;
+
+        // Mascotas de ejemplo para resultados de IA
+        const samplePets = [
+            {
+                name: "Max",
+                type: "perro",
+                age: "2 años",
+                image: "../assets/images/perro.png",
+                compatibility: 95,
+                reasons: ["Energía compatible", "Tamaño ideal", "Fácil de entrenar", "Buen con familias"],
+                organization: "Fundación Patitas Felices",
+                location: "Veracruz, México"
+            },
+            {
+                name: "Luna",
+                type: "gata",
+                age: "1 año",
+                image: "../assets/images/gata.jpg",
+                compatibility: 92,
+                reasons: ["Personalidad tranquila", "Independiente", "Perfecta para apartamentos", "Muy cariñosa"],
+                organization: "Refugio Micho Amor",
+                location: "Tantoyuca, México"
+            },
+            {
+                name: "Rocky",
+                type: "perro",
+                age: "3 años",
+                image: "../assets/images/perro2.webp",
+                compatibility: 88,
+                reasons: ["Activo y juguetón", "Excelente compañero", "Leal y protector", "Le encanta caminar"],
+                organization: "Perritos Callejeros SOS",
+                location: "Poza Rica, México"
+            }
+        ];
+
+        // Elementos del DOM
+        const steps = document.querySelectorAll('.wizard-step');
+        const progressSteps = document.querySelectorAll('.progress-step');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const stepCounter = document.getElementById('step-counter');
+
+        // Event listeners para opciones
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const step = this.closest('.wizard-step').dataset.step;
+                
+                // Remover selección previa en este paso
+                this.parentNode.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                
+                // Agregar selección actual
+                this.classList.add('selected');
+                
+                // Guardar respuesta
+                userAnswers[`step${step}`] = this.dataset.value;
+                
+                // Habilitar botón siguiente
+                updateNavigation();
+            });
+        });
+
+        // Event listeners para navegación
+        nextBtn.addEventListener('click', nextStep);
+        prevBtn.addEventListener('click', prevStep);
+
+        function nextStep() {
+            if (currentStep < 5) {
+                if (currentStep === totalSteps) {
+                    // Iniciar análisis de IA
+                    runAIAnalysis();
+                }
+                
+                showStep(currentStep + 1);
+                currentStep++;
+                updateNavigation();
+                updateProgress();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                showStep(currentStep - 1);
+                currentStep--;
+                updateNavigation();
+                updateProgress();
+            }
+        }
+
+        function showStep(stepNum) {
+            steps.forEach(step => {
+                step.classList.remove('active');
+                if (step.dataset.step == stepNum) {
+                    step.classList.add('active');
+                }
+            });
+        }
+
+        function updateNavigation() {
+            // Botón anterior
+            prevBtn.disabled = currentStep === 1;
+            
+            // Botón siguiente
+            if (currentStep === 5) {
+                nextBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'flex';
+                const hasAnswer = userAnswers[`step${currentStep}`];
+                nextBtn.disabled = !hasAnswer;
+                
+                if (currentStep === totalSteps) {
+                    nextBtn.innerHTML = '<i class="fas fa-magic"></i> Analizar con IA';
+                } else {
+                    nextBtn.innerHTML = 'Siguiente <i class="fas fa-chevron-right"></i>';
+                }
+            }
+            
+            // Contador
+            if (currentStep <= totalSteps) {
+                stepCounter.textContent = `Paso ${currentStep} de ${totalSteps}`;
+            } else {
+                stepCounter.textContent = 'Resultados IA';
+            }
+        }
+
+        function updateProgress() {
+            progressSteps.forEach((step, index) => {
+                const stepNum = index + 1;
+                step.classList.remove('active', 'completed');
+                
+                if (stepNum === currentStep) {
+                    step.classList.add('active');
+                } else if (stepNum < currentStep) {
+                    step.classList.add('completed');
+                }
+            });
+        }
+
+        function runAIAnalysis() {
+            const loadingAnimation = document.querySelector('.loading-animation');
+            const aiResults = document.querySelector('.ai-results');
+            
+            // Mostrar loading
+            loadingAnimation.style.display = 'flex';
+            aiResults.style.display = 'none';
+            
+            // Simular análisis de IA
+            setTimeout(() => {
+                loadingAnimation.style.display = 'none';
+                aiResults.style.display = 'block';
+                displayAIResults();
+            }, 3000);
+        }
+
+        function displayAIResults() {
+            const matchesContainer = document.getElementById('ai-matches');
+            
+            // Filtrar mascotas basado en respuestas (simulado)
+            let relevantPets = samplePets;
+            
+            if (userAnswers.step1 === 'perro') {
+                relevantPets = samplePets.filter(pet => pet.type === 'perro');
+            } else if (userAnswers.step1 === 'gato') {
+                relevantPets = samplePets.filter(pet => pet.type === 'gata');
+            }
+            
+            // Generar HTML para matches
+            matchesContainer.innerHTML = relevantPets.map(pet => `
+                <div class="match-card">
+                    <img src="${pet.image}" alt="${pet.name}" class="match-image">
+                    <div class="match-info">
+                        <div class="match-compatibility">${pet.compatibility}% Compatible</div>
+                        <h4>${pet.name}</h4>
+                        <p>${pet.type.charAt(0).toUpperCase() + pet.type.slice(1)} • ${pet.age}</p>
+                        <p style="font-size: 0.85rem; color: #6b7280; margin: 0.5rem 0;">
+                            <i class="fas fa-building" style="margin-right: 0.3rem;"></i>
+                            ${pet.organization}
+                        </p>
+                        <p style="font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.3rem;"></i>
+                            ${pet.location}
+                        </p>
+                        
+                        <div class="compatibility-reasons">
+                            <h4>¿Por qué es perfecto para ti?</h4>
+                            <ul>
+                                ${pet.reasons.map(reason => `<li><i class="fas fa-check-circle"></i> ${reason}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                            <a href="../adopciones.html" class="btn-service" style="flex: 1; text-align: center; font-size: 0.85rem;">
+                                <i class="fas fa-heart"></i>
+                                Conocer a ${pet.name}
+                            </a>
+                            <button class="btn-service coming-soon" style="flex: 1; font-size: 0.85rem;" onclick="startChat('${pet.name}')">
+                                <i class="fas fa-comments"></i>
+                                Chat Directo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function startChat(petName) {
+            alert(`🚀 Próximamente: Chat directo con la organización de ${petName}. Por ahora, visita la página de adopciones para contactar.`);
+        }
+
+        // Inicializar
+        updateNavigation();
+        updateProgress();
+        
+        // Verificar si hay una mascota específica para adoptar
+        const urlParams = new URLSearchParams(window.location.search);
+        const petId = urlParams.get('pet');
+        const step = urlParams.get('step');
+        
+        if (petId && step === 'adoption') {
+            console.log('🐕 Mascota específica para adopción detectada:', petId);
+            
+            // Agregar mensaje personalizado
+            const wizardContainer = document.querySelector('.wizard-container');
+            if (wizardContainer) {
+                const petMessage = document.createElement('div');
+                petMessage.style.cssText = `
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 1rem;
+                    border-radius: 12px;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                `;
+                petMessage.innerHTML = `
+                    <i class="fas fa-heart" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <strong>¡Genial! Vamos a ayudarte con la adopción</strong>
+                    <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">Responde estas preguntas para asegurar la mejor compatibilidad</p>
+                `;
+                wizardContainer.insertBefore(petMessage, wizardContainer.firstChild);
+            }
+            
+            // Guardar información para el final del proceso
+            localStorage.setItem('adopcionEspecifica', petId);
+        }
+
+        // Menu móvil
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        }
+
+        console.log('🤖 IA de Adopción Express completamente funcional - PETHOUSE');
+    </script>
+</body>
+</html>

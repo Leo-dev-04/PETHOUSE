@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Principal -->
+    <title>Tienda PETHOUSE | Productos para Mascotas y Donaciones México</title>
+    <meta name="description" content="Tienda oficial PETHOUSE México. Productos para mascotas, accesorios, alimentos y donaciones. Cada compra ayuda a seguir rescatando vidas en Veracruz.">
+    <meta name="keywords" content="tienda mascotas, productos perros gatos, donaciones PETHOUSE, accesorios mascotas México, comida animales Veracruz">
+    <meta name="author" content="PETHOUSE México">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Tienda PETHOUSE México - Productos que Salvan Vidas">
+    <meta property="og:description" content="Compra productos para mascotas y apoya nuestro rescate animal. Cada compra ayuda a seguir salvando vidas en México.">
+    <meta property="og:image" content="../assets/images/LOGO.jpg">
+    <meta property="og:url" content="https://pethouse-mexico.com/tienda">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tienda PETHOUSE México">
+    <meta name="twitter:description" content="Productos para mascotas que apoyan el rescate animal en México">
+    <meta name="twitter:image" content="../assets/images/LOGO.jpg">
+    
+    <!-- CSS Optimizado -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../performance.css">
+    <link rel="stylesheet" href="../alertas-modales.css">
+    <link rel="stylesheet" href="../tienda-moderna.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/LOGO.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/LOGO.jpg">
+</head>
+
+<body>
+    <div class="tienda-container">
+        <!-- Header con navegación -->
+        <header class="tienda-header">
+            <!-- Navegación principal -->
+            <nav class="main-navigation">
+                <div class="nav-container">
+                    <div class="nav-brand">
+                        <a href="index.html" class="brand-link">
+                            <i class="fas fa-paw"></i>
+                            <span>PETHOUSE</span>
+                        </a>
+                    </div>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-item">Inicio</a></li>
+                        <li><a href="adopciones.html" class="nav-item">Adopciones</a></li>
+                        <li><a href="galeria.html" class="nav-item">Galería</a></li>
+                        <li><a href="tienda.html" class="nav-item active">Tienda</a></li>
+                        <li><a href="servicios.html" class="nav-item">Servicios</a></li>
+                        <li><a href="nosotros.html" class="nav-item">Nosotros</a></li>
+                        <li><a href="contacto.html" class="nav-item">Contacto</a></li>
+                    </ul>
+                    
+                    <div class="nav-auth">
+                        <a href="login.html" class="auth-link">
+                            <i class="fas fa-user"></i>
+                            Cuenta
+                        </a>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Header de tienda -->
+            <div class="header-content">
+                <div class="brand-section">
+                    <div class="brand-logo">
+                        <i class="fas fa-store"></i>
+                        <h1>PETHOUSE Tienda</h1>
+                    </div>
+                    <p class="brand-subtitle">Productos que salvan vidas</p>
+                </div>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Buscar productos...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="cart-container">
+                        <button class="cart-btn" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <span class="cart-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="main-nav">
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="#" class="nav-link active" data-category="todos">Todos</a></li>
+                        <li><a href="#" class="nav-link" data-category="alimentacion">Alimentación</a></li>
+                        <li><a href="#" class="nav-link" data-category="accesorios">Accesorios</a></li>
+                        <li><a href="#" class="nav-link" data-category="juguetes">Juguetes</a></li>
+                        <li><a href="#" class="nav-link" data-category="higiene">Higiene</a></li>
+                        <li><a href="#" class="nav-link" data-category="donaciones">Donaciones</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button class="filter-btn" id="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            Filtros
+                        </button>
+                        <select class="sort-select" id="sort-select">
+                            <option value="relevancia">Relevancia</option>
+                            <option value="precio-asc">Precio: Menor a Mayor</option>
+                            <option value="precio-desc">Precio: Mayor a Menor</option>
+                            <option value="nombre">Nombre A-Z</option>
+                            <option value="popularidad">Más Popular</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Marketplace PETHOUSE</h2>
+                    <p>Plataforma donde fundaciones y organizaciones venden productos de calidad para mascotas. Cada compra apoya directamente el rescate animal en México mientras encuentras lo mejor para tu mascota.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">85+</span>
+                            <span class="stat-label">Organizaciones vendedoras</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$350,000</span>
+                            <span class="stat-label">Generado para rescates</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1,200+</span>
+                            <span class="stat-label">Productos disponibles</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Marketplace Solidario</h3>
+                        <p>Las organizaciones venden, tú compras, los animales se benefician. Cada peso va directamente al rescate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros laterales -->
+        <div class="filters-sidebar" id="filters-sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <i class="fas fa-filter"></i>
+                    Filtros
+                </h3>
+                <button class="close-filters" id="close-filters">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="filter-section">
+                <h4>Precio</h4>
+                <div class="price-range">
+                    <input type="range" id="price-min" min="0" max="2000" value="0" class="price-slider">
+                    <input type="range" id="price-max" min="0" max="2000" value="2000" class="price-slider">
+                    <div class="price-display">
+                        <span>$<span id="price-min-display">0</span></span>
+                        <span>$<span id="price-max-display">2000</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Para</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="perros">
+                        <span class="checkmark"></span>
+                        <i class="fas fa-dog"></i>
+                        Perros
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="gatos">
+                        <span class="checkmark"></span>
+                        <i class="fas fa-cat"></i>
+                        Gatos
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="ambos">
+                        <span class="checkmark"></span>
+                        <i class="fas fa-paw"></i>
+                        Ambos
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Tamaño</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="pequeno">
+                        <span class="checkmark"></span>
+                        Pequeño
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="mediano">
+                        <span class="checkmark"></span>
+                        Mediano
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="grande">
+                        <span class="checkmark"></span>
+                        Grande
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Marca</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="pethouse">
+                        <span class="checkmark"></span>
+                        PETHOUSE Original
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="pedigree">
+                        <span class="checkmark"></span>
+                        Pedigree
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="hills">
+                        <span class="checkmark"></span>
+                        Hill's
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="royal">
+                        <span class="checkmark"></span>
+                        Royal Canin
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="clear-filters">Limpiar filtros</button>
+                <button class="apply-filters">Aplicar filtros</button>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Productos destacados -->
+            <section class="featured-section">
+                <h2>
+                    <i class="fas fa-star"></i>
+                    Productos Destacados
+                </h2>
+                <div class="featured-grid" id="featured-products">
+                    <!-- Los productos destacados se cargarán aquí -->
+                </div>
+            </section>
+
+            <!-- Categorías rápidas -->
+            <section class="categories-section">
+                <h2>
+                    <i class="fas fa-th-large"></i>
+                    Categorías
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="alimentacion">
+                        <div class="category-icon">
+                            <i class="fas fa-bowl-food"></i>
+                        </div>
+                        <h3>Alimentación</h3>
+                        <p>Comida premium y snacks saludables</p>
+                        <span class="category-count">285 productos</span>
+                    </div>
+
+                    <div class="category-card" data-category="accesorios">
+                        <div class="category-icon">
+                            <i class="fas fa-collar"></i>
+                        </div>
+                        <h3>Accesorios</h3>
+                        <p>Collares, correas y más</p>
+                        <span class="category-count">156 productos</span>
+                    </div>
+
+                    <div class="category-card" data-category="juguetes">
+                        <div class="category-icon">
+                            <i class="fas fa-baseball"></i>
+                        </div>
+                        <h3>Juguetes</h3>
+                        <p>Diversión y entretenimiento</p>
+                        <span class="category-count">92 productos</span>
+                    </div>
+
+                    <div class="category-card" data-category="higiene">
+                        <div class="category-icon">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h3>Higiene</h3>
+                        <p>Cuidado y limpieza</p>
+                        <span class="category-count">78 productos</span>
+                    </div>
+
+                    <div class="category-card" data-category="donaciones">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Donaciones</h3>
+                        <p>Apoya directamente nuestro rescate</p>
+                        <span class="category-count">12 opciones</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección para organizaciones vendedoras -->
+            <section class="seller-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 20px; padding: 3rem 2rem; margin-bottom: 4rem; text-align: center;">
+                <div class="seller-content">
+                    <div class="seller-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: white;"></i>
+                    </div>
+                    <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">¿Eres una organización?</h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Únete a nuestro marketplace y genera ingresos adicionales vendiendo productos para mascotas. Nosotros manejamos pagos, envíos y promoción.</p>
+                    
+                    <div class="seller-benefits" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div class="benefit-item" style="text-align: left;">
+                            <i class="fas fa-percent" style="color: var(--success-color); margin-right: 0.5rem;"></i>
+                            <strong>Comisión competitiva:</strong> Solo 5% por venta
+                        </div>
+                        <div class="benefit-item" style="text-align: left;">
+                            <i class="fas fa-shipping-fast" style="color: var(--success-color); margin-right: 0.5rem;"></i>
+                            <strong>Logística incluida:</strong> Nosotros manejamos envíos
+                        </div>
+                        <div class="benefit-item" style="text-align: left;">
+                            <i class="fas fa-credit-card" style="color: var(--success-color); margin-right: 0.5rem;"></i>
+                            <strong>Pagos seguros:</strong> Procesamiento automático
+                        </div>
+                        <div class="benefit-item" style="text-align: left;">
+                            <i class="fas fa-bullhorn" style="color: var(--success-color); margin-right: 0.5rem;"></i>
+                            <strong>Marketing gratuito:</strong> Promoción en la plataforma
+                        </div>
+                    </div>
+
+                    <div class="seller-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="servicios.html#plan-ultra" class="btn-primary" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                            <i class="fas fa-crown"></i>
+                            Ver Plan Ultra
+                        </a>
+                        <a href="contacto.html" class="btn-secondary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; border: 2px solid var(--primary-color); border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                            <i class="fas fa-info-circle"></i>
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid de productos -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-shopping-bag"></i>
+                        Todos los Productos
+                    </h2>
+                    <div class="results-info">
+                        <span id="results-count">1,248 productos encontrados</span>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination" id="pagination">
+                    <button class="page-btn prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Anterior
+                    </button>
+                    <div class="page-numbers">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn">15</button>
+                    </div>
+                    <button class="page-btn next">
+                        Siguiente
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Carrito lateral -->
+        <div class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3>
+                    <i class="fas fa-shopping-cart"></i>
+                    Mi Carrito
+                </h3>
+                <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Los items del carrito se mostrarán aquí -->
+            </div>
+
+            <div class="cart-empty" id="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <h4>Tu carrito está vacío</h4>
+                <p>Agrega productos para empezar a ayudar a nuestros rescatados</p>
+            </div>
+
+            <div class="cart-footer" id="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Envío:</span>
+                        <span id="cart-shipping">Gratis</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="cart-total-amount">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="btn-continue">Continuar comprando</button>
+                    <button class="btn-checkout">
+                        <i class="fas fa-credit-card"></i>
+                        Proceder al pago
+                    </button>
+                </div>
+
+                <div class="impact-message">
+                    <i class="fas fa-heart"></i>
+                    <p>Con esta compra ayudarás a alimentar <strong id="animals-helped">0</strong> animales por una semana</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Overlay global (usado por filtros, carrito y modales) -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Scripts principales -->
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+    <script src="../tienda-moderna.js" defer></script>
+    <script>
+        // Verificar que los estilos están cargados
+        if (document.styleSheets.length > 0) {
+            console.log('✅ Estilos cargados:', document.styleSheets.length);
+        }
+    </script>
+</body>
+</html>

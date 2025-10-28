@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Organizaciones - PETHOUSE</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* Header simple */
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Controles simples */
+        .controls {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .search-box:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #357abd;
+        }
+
+        .btn.active {
+            background: #2d5a8a;
+        }
+
+        /* Mapa simple y funcional */
+        .map-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #mapa {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Lista de organizaciones */
+        .organizaciones {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .organizaciones h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .org-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+        }
+
+        .org-card h3 {
+            color: #4a90e2;
+            margin-bottom: 8px;
+        }
+
+        .org-card p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .org-card .btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            #mapa {
+                height: 300px;
+            }
+        }
+
+        /* Estados de carga */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1><i class="fas fa-paw"></i> PETHOUSE - Mapa de Organizaciones</h1>
+        <p>Encuentra refugios y organizaciones de rescate animal</p>
+    </div>
+
+    <div class="container">
+        <!-- Controles -->
+        <div class="controls">
+            <input type="text" id="searchInput" class="search-box" placeholder="Buscar por ciudad o nombre de organización...">
+            
+            <div class="buttons">
+                <button class="btn" onclick="mostrarTodas()">
+                    <i class="fas fa-list"></i> Mostrar Todas
+                </button>
+                <button class="btn" onclick="filtrarPorTipo('Refugio')">
+                    <i class="fas fa-home"></i> Refugios
+                </button>
+                <button class="btn" onclick="filtrarPorTipo('Fundación')">
+                    <i class="fas fa-heart"></i> Fundaciones
+                </button>
+                <button class="btn" onclick="centrarEnMexico()">
+                    <i class="fas fa-map-marker-alt"></i> Centrar México
+                </button>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container">
+            <div id="mapa"></div>
+        </div>
+
+        <!-- Lista de organizaciones -->
+        <div class="organizaciones">
+            <h2><i class="fas fa-building"></i> Organizaciones Registradas</h2>
+            <div id="listaOrganizaciones">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Cargando organizaciones...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script>
+        // Variables globales simples
+        let mapa = null;
+        let marcadores = [];
+        let filtroActual = '';
+
+        // Datos simples de organizaciones
+        const organizaciones = [
+            {
+                id: 1,
+                nombre: "Fundación ADAN",
+                tipo: "Fundación",
+                ciudad: "Ciudad de México",
+                direccion: "Av. Río Mixcoac 211, CDMX",
+                coordenadas: [19.3732, -99.1871],
+                telefono: "55 5563-3401",
+                animales: 120,
+                descripcion: "Fundación dedicada al rescate y adopción de animales abandonados."
+            },
+            {
+                id: 2,
+                nombre: "Milagros Caninos",
+                tipo: "Refugio",
+                ciudad: "Guadalajara",
+                direccion: "Calle Reforma 123, Guadalajara",
+                coordenadas: [20.6597, -103.3496],
+                telefono: "33 1234-5678",
+                animales: 85,
+                descripcion: "Refugio especializado en el rescate de perros callejeros."
+            },
+            {
+                id: 3,
+                nombre: "Patitas Felices",
+                tipo: "Refugio",
+                ciudad: "Monterrey",
+                direccion: "Av. Constitución 456, Monterrey",
+                coordenadas: [25.6866, -100.3161],
+                telefono: "81 8765-4321",
+                animales: 92,
+                descripcion: "Refugio para perros y gatos con programas de adopción."
+            },
+            {
+                id: 4,
+                nombre: "Huellitas de Amor",
+                tipo: "Fundación",
+                ciudad: "Puebla",
+                direccion: "5 de Mayo 789, Puebla",
+                coordenadas: [19.0414, -98.2063],
+                telefono: "22 2345-6789",
+                animales: 64,
+                descripcion: "Fundación que rescata animales heridos y abandonados."
+            },
+            {
+                id: 5,
+                nombre: "Rescate Animal Tijuana",
+                tipo: "Refugio",
+                ciudad: "Tijuana",
+                direccion: "Av. Revolución 321, Tijuana",
+                coordenadas: [32.5149, -117.0382],
+                telefono: "66 4321-0987",
+                animales: 78,
+                descripcion: "Organización fronteriza dedicada al bienestar animal."
+            },
+            {
+                id: 6,
+                nombre: "Santuario Animal Mérida",
+                tipo: "Fundación",
+                ciudad: "Mérida",
+                direccion: "Calle 60 x 47, Mérida",
+                coordenadas: [20.9674, -89.5926],
+                telefono: "99 9876-5432",
+                animales: 156,
+                descripcion: "Santuario que cuida animales rescatados del maltrato."
+            }
+        ];
+
+        // Inicializar cuando la página se carga
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Inicializando mapa simple...');
+            inicializarMapa();
+            cargarOrganizaciones();
+            configurarBusqueda();
+        });
+
+        // Inicializar mapa básico
+        function inicializarMapa() {
+            try {
+                // Crear mapa centrado en México
+                mapa = L.map('mapa').setView([23.6345, -102.5528], 5);
+
+                // Agregar tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(mapa);
+
+                // Agregar marcadores
+                agregarMarcadores();
+
+                console.log('Mapa inicializado correctamente');
+                mostrarMensaje('Mapa cargado correctamente', 'success');
+
+            } catch (error) {
+                console.error('Error inicializando mapa:', error);
+                document.getElementById('mapa').innerHTML = 
+                    '<div class="error">Error cargando el mapa. <button onclick="inicializarMapa()">Reintentar</button></div>';
+            }
+        }
+
+        // Agregar marcadores al mapa
+        function agregarMarcadores() {
+            // Limpiar marcadores existentes
+            marcadores.forEach(marcador => mapa.removeLayer(marcador));
+            marcadores = [];
+
+            organizaciones.forEach(org => {
+                const marcador = L.marker(org.coordenadas)
+                    .addTo(mapa)
+                    .bindPopup(`
+                        <div style="text-align: center; min-width: 200px;">
+                            <h4 style="margin: 0 0 8px 0; color: #4a90e2;">${org.nombre}</h4>
+                            <p style="margin: 0 0 5px 0;"><strong>Tipo:</strong> ${org.tipo}</p>
+                            <p style="margin: 0 0 5px 0;"><strong>Ciudad:</strong> ${org.ciudad}</p>
+                            <p style="margin: 0 0 5px 0;"><strong>Animales:</strong> ${org.animales}</p>
+                            <p style="margin: 0 0 10px 0;"><strong>Teléfono:</strong> ${org.telefono}</p>
+                            <button onclick="verDetalles(${org.id})" style="background: #4a90e2; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    `);
+
+                marcadores.push(marcador);
+            });
+        }
+
+        // Cargar lista de organizaciones
+        function cargarOrganizaciones() {
+            const lista = document.getElementById('listaOrganizaciones');
+            let html = '';
+
+            organizaciones.forEach(org => {
+                html += `
+                    <div class="org-card">
+                        <h3>${org.nombre}</h3>
+                        <p><strong>Tipo:</strong> ${org.tipo}</p>
+                        <p><strong>Ciudad:</strong> ${org.ciudad}</p>
+                        <p><strong>Dirección:</strong> ${org.direccion}</p>
+                        <p><strong>Teléfono:</strong> ${org.telefono}</p>
+                        <p><strong>Animales disponibles:</strong> ${org.animales}</p>
+                        <p>${org.descripcion}</p>
+                        <button class="btn" onclick="irAlMapa(${org.coordenadas[0]}, ${org.coordenadas[1]})">
+                            <i class="fas fa-map-marker-alt"></i> Ver en Mapa
+                        </button>
+                    </div>
+                `;
+            });
+
+            lista.innerHTML = html;
+        }
+
+        // Configurar búsqueda
+        function configurarBusqueda() {
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('input', function() {
+                const termino = this.value.toLowerCase();
+                filtrarOrganizaciones(termino);
+            });
+        }
+
+        // Filtrar organizaciones
+        function filtrarOrganizaciones(termino) {
+            const lista = document.getElementById('listaOrganizaciones');
+            let html = '';
+            let encontradas = 0;
+
+            organizaciones.forEach(org => {
+                const coincide = 
+                    org.nombre.toLowerCase().includes(termino) ||
+                    org.ciudad.toLowerCase().includes(termino) ||
+                    org.tipo.toLowerCase().includes(termino);
+
+                if (coincide) {
+                    encontradas++;
+                    html += `
+                        <div class="org-card">
+                            <h3>${org.nombre}</h3>
+                            <p><strong>Tipo:</strong> ${org.tipo}</p>
+                            <p><strong>Ciudad:</strong> ${org.ciudad}</p>
+                            <p><strong>Dirección:</strong> ${org.direccion}</p>
+                            <p><strong>Teléfono:</strong> ${org.telefono}</p>
+                            <p><strong>Animales disponibles:</strong> ${org.animales}</p>
+                            <p>${org.descripcion}</p>
+                            <button class="btn" onclick="irAlMapa(${org.coordenadas[0]}, ${org.coordenadas[1]})">
+                                <i class="fas fa-map-marker-alt"></i> Ver en Mapa
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+
+            if (encontradas === 0) {
+                html = '<div class="loading">No se encontraron organizaciones que coincidan con la búsqueda.</div>';
+            }
+
+            lista.innerHTML = html;
+        }
+
+        // Funciones de los botones
+        function mostrarTodas() {
+            document.getElementById('searchInput').value = '';
+            cargarOrganizaciones();
+            agregarMarcadores();
+            limpiarFiltros();
+        }
+
+        function filtrarPorTipo(tipo) {
+            const lista = document.getElementById('listaOrganizaciones');
+            let html = '';
+
+            organizaciones.forEach(org => {
+                if (org.tipo === tipo) {
+                    html += `
+                        <div class="org-card">
+                            <h3>${org.nombre}</h3>
+                            <p><strong>Tipo:</strong> ${org.tipo}</p>
+                            <p><strong>Ciudad:</strong> ${org.ciudad}</p>
+                            <p><strong>Dirección:</strong> ${org.direccion}</p>
+                            <p><strong>Teléfono:</strong> ${org.telefono}</p>
+                            <p><strong>Animales disponibles:</strong> ${org.animales}</p>
+                            <p>${org.descripcion}</p>
+                            <button class="btn" onclick="irAlMapa(${org.coordenadas[0]}, ${org.coordenadas[1]})">
+                                <i class="fas fa-map-marker-alt"></i> Ver en Mapa
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+
+            lista.innerHTML = html;
+            marcarBotonActivo(tipo);
+        }
+
+        function centrarEnMexico() {
+            if (mapa) {
+                mapa.setView([23.6345, -102.5528], 5);
+                mostrarMensaje('Mapa centrado en México', 'success');
+            }
+        }
+
+        function irAlMapa(lat, lng) {
+            if (mapa) {
+                mapa.setView([lat, lng], 12);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mostrarMensaje('Organización ubicada en el mapa', 'success');
+            }
+        }
+
+        function verDetalles(id) {
+            const org = organizaciones.find(o => o.id === id);
+            if (org) {
+                alert(`
+                    ${org.nombre}
+                    
+                    Tipo: ${org.tipo}
+                    Ciudad: ${org.ciudad}
+                    Dirección: ${org.direccion}
+                    Teléfono: ${org.telefono}
+                    Animales: ${org.animales}
+                    
+                    ${org.descripcion}
+                `);
+            }
+        }
+
+        function marcarBotonActivo(tipo) {
+            // Limpiar botones activos
+            document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Marcar el botón correspondiente
+            const botones = document.querySelectorAll('.btn');
+            botones.forEach(btn => {
+                if (btn.textContent.includes(tipo)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function limpiarFiltros() {
+            document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        function mostrarMensaje(mensaje, tipo) {
+            // Crear elemento de mensaje
+            const div = document.createElement('div');
+            div.className = tipo;
+            div.innerHTML = `<i class="fas fa-info-circle"></i> ${mensaje}`;
+            
+            // Insertar al principio del container
+            const container = document.querySelector('.container');
+            container.insertBefore(div, container.firstChild);
+            
+            // Remover después de 3 segundos
+            setTimeout(() => {
+                div.remove();
+            }, 3000);
+        }
+
+        // Manejo de errores global
+        window.onerror = function(mensaje, archivo, linea) {
+            console.error('Error:', mensaje, 'en', archivo, 'línea', linea);
+            mostrarMensaje('Se produjo un error. La página seguirá funcionando.', 'error');
+            return true;
+        };
+
+        console.log('PETHOUSE Mapa Simple - Versión Funcional Cargada');
+    </script>
+</body>
+</html>

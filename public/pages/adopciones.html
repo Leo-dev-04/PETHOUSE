@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Adopción - PETHOUSE | Proceso Completo de Adopción</title>
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Centro oficial de adopciones PETHOUSE. Proceso completo con filtros avanzados, IA personalizada y seguimiento. Más de 150 mascotas esperando un hogar.">
+    <meta name="keywords" content="adopción mascotas México, perros adopción, gatos adopción, PETHOUSE, rescate animal, mascotas Veracruz">
+    <meta name="author" content="PETHOUSE">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Adopciones - PETHOUSE | Encuentra tu Compañero Perfecto">
+    <meta property="og:description" content="Más de 150 mascotas esperan un hogar lleno de amor. Encuentra tu compañero ideal hoy.">
+    <meta property="og:image" content="../assets/images/LOGO.jpg">
+    <meta property="og:url" content="/pages/adopciones.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adopciones - PETHOUSE">
+    <meta name="twitter:description" content="Más de 150 mascotas esperan un hogar lleno de amor">
+    <meta name="twitter:image" content="../assets/images/LOGO.jpg">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../performance.css">
+    <link rel="stylesheet" href="../alertas-modales.css">
+    <link rel="stylesheet" href="../adopciones-moderno.css">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/LOGO.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/LOGO.jpg">
+    
+    <!-- Precargas críticas -->
+    <link rel="preload" href="../assets/images/LOGO.jpg" as="image">
+    <link rel="preload" href="../assets/images/mascotas.webp" as="image">
+    
+    <!-- Schema.org para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PETHOUSE",
+        "description": "Refugio de animales especializado en adopciones",
+        "url": "https://pethouse.com",
+        "sameAs": [
+            "https://facebook.com/pethouse",
+            "https://instagram.com/pethouse"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chicontepec",
+            "addressRegion": "Veracruz",
+            "addressCountry": "México"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div class="adopciones-container">
+        <!-- Navegación principal -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-link">
+                        <i class="fas fa-paw"></i>
+                        <span>PETHOUSE</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="adopciones.html" class="nav-item active">Centro Adopción</a></li>
+                    <li><a href="galeria.html" class="nav-item">Explorar</a></li>
+                    <li><a href="servicios.html" class="nav-item">Servicios</a></li>
+                    <li><a href="nosotros.html" class="nav-item">Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav-item">Contacto</a></li>
+                </ul>
+                
+                <div class="nav-auth">
+                    <a href="login.html" class="auth-link">
+                        <i class="fas fa-user"></i>
+                        Cuenta
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-adopciones">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <img src="../assets/images/mascotas.webp" alt="Mascotas esperando adopción" class="hero-bg-image">
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-certificate"></i>
+                        Centro Oficial de Adopción
+                    </span>
+                    <h1 class="hero-title">
+                        Proceso Completo de<br>
+                        <span class="gradient-text">Adopción Responsable</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Centro oficial con proceso integral: filtros avanzados, IA personalizada, verificación automática 
+                        y seguimiento completo. Todo lo que necesitas para una adopción exitosa.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#catalogo-mascotas" class="hero-btn primary">
+                            <i class="fas fa-search"></i>
+                            Buscar con Filtros Avanzados
+                        </a>
+                        <a href="adopcion-express.html" class="hero-btn secondary ai-special">
+                            <i class="fas fa-robot"></i>
+                            Asistente IA Personalizado
+                        </a>
+                        <a href="galeria.html" class="hero-btn tertiary">
+                            <i class="fas fa-images"></i>
+                            Exploración Rápida
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="150">11</span>
+                            <span class="stat-label">Mascotas Disponibles</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="98">98</span>
+                            <span class="stat-label">% Éxito en Adopciones</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="24">24</span>
+                            <span class="stat-label">Horas Respuesta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Descubre a nuestras mascotas</span>
+            </div>
+        </section>
+
+        <!-- Filtros de búsqueda avanzados -->
+        <section class="filtros-section">
+            <div class="section-container">
+                <div class="filtros-header">
+                    <h2>Encuentra tu Mascota Ideal</h2>
+                    <p>Usa nuestros filtros inteligentes para encontrar el compañero perfecto para tu familia</p>
+                </div>
+                
+                <div class="filtros-container">
+                    <div class="filtros-grid">
+                        <div class="filtro-grupo">
+                            <label for="tipo-mascota">
+                                <i class="fas fa-paw"></i>
+                                Tipo de Mascota
+                            </label>
+                            <select id="tipo-mascota" class="filtro-select">
+                                <option value="">Todos los tipos</option>
+                                <option value="perro">🐕 Perros</option>
+                                <option value="gato">🐱 Gatos</option>
+                                <option value="otros">🐰 Otros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filtro-grupo">
+                            <label for="edad-mascota">
+                                <i class="fas fa-birthday-cake"></i>
+                                Edad
+                            </label>
+                            <select id="edad-mascota" class="filtro-select">
+                                <option value="">Todas las edades</option>
+                                <option value="cachorro">Cachorro (0-1 año)</option>
+                                <option value="joven">Joven (1-3 años)</option>
+                                <option value="adulto">Adulto (3-7 años)</option>
+                                <option value="senior">Senior (7+ años)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filtro-grupo">
+                            <label for="tamano-mascota">
+                                <i class="fas fa-ruler"></i>
+                                Tamaño
+                            </label>
+                            <select id="tamano-mascota" class="filtro-select">
+                                <option value="">Todos los tamaños</option>
+                                <option value="pequeno">Pequeño (5-15 kg)</option>
+                                <option value="mediano">Mediano (15-30 kg)</option>
+                                <option value="grande">Grande (30+ kg)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filtro-grupo">
+                            <label for="genero-mascota">
+                                <i class="fas fa-venus-mars"></i>
+                                Género
+                            </label>
+                            <select id="genero-mascota" class="filtro-select">
+                                <option value="">Ambos géneros</option>
+                                <option value="macho">Macho</option>
+                                <option value="hembra">Hembra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filtro-grupo">
+                            <label for="personalidad-mascota">
+                                <i class="fas fa-smile"></i>
+                                Personalidad
+                            </label>
+                            <select id="personalidad-mascota" class="filtro-select">
+                                <option value="">Cualquier personalidad</option>
+                                <option value="tranquilo">😌 Tranquilo</option>
+                                <option value="activo">⚡ Activo</option>
+                                <option value="jugueton">🎾 Juguetón</option>
+                                <option value="sociable">🤝 Sociable</option>
+                                <option value="cariñoso">❤️ Cariñoso</option>
+                                <option value="independiente">🗽 Independiente</option>
+                                <option value="protector">🛡️ Protector</option>
+                                <option value="energico">🔥 Energético</option>
+                                <option value="leal">💎 Leal</option>
+                                <option value="inteligente">🧠 Inteligente</option>
+                                <option value="curioso">🔍 Curioso</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filtro-grupo buscar-grupo">
+                            <label for="buscar-nombre">
+                                <i class="fas fa-search"></i>
+                                Buscar por nombre
+                            </label>
+                            <div class="search-input-container">
+                                <input type="text" id="buscar-nombre" class="filtro-input" placeholder="Ej: Luna, Max, Bella...">
+                                <button class="search-btn" id="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filtros-help">
+                        <div class="help-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="help-text">
+                            <strong>Consejo:</strong> Selecciona los criterios que desees y luego haz clic en <strong>"Aplicar Filtros"</strong> para ver los resultados. 
+                            La búsqueda por nombre se aplica automáticamente después de 3 caracteres.
+                        </div>
+                    </div>
+                    
+                    <div class="filtros-actions">
+                        <button id="btn-filtrar" class="btn-filtrar primary">
+                            <i class="fas fa-filter"></i>
+                            Aplicar Filtros
+                        </button>
+                        <button id="btn-limpiar" class="btn-filtrar secondary">
+                            <i class="fas fa-times"></i>
+                            Limpiar Filtros
+                        </button>
+                        <button id="btn-favoritos" class="btn-filtrar tertiary">
+                            <i class="fas fa-heart"></i>
+                            Mis Favoritos (<span id="favoritos-count">0</span>)
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resultados y ordenamiento -->
+                <div class="resultados-header">
+                    <div class="resultados-info">
+                        <span id="resultados-count">Cargando mascotas...</span>
+                    </div>
+                    <div class="ordenamiento">
+                        <label for="ordenar-por">Ordenar por:</label>
+                        <select id="ordenar-por" class="orden-select">
+                            <option value="recientes">Más recientes</option>
+                            <option value="alfabetico">A-Z</option>
+                            <option value="edad-asc">Edad: menor a mayor</option>
+                            <option value="edad-desc">Edad: mayor a menor</option>
+                            <option value="popularidad">Más populares</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo de mascotas -->
+        <section class="catalogo-section" id="catalogo-mascotas">
+            <div class="section-container">
+                <!-- Grid de mascotas -->
+                <div class="mascotas-grid" id="mascotas-grid">
+                    <!-- Las mascotas se cargan dinámicamente -->
+                </div>
+                
+                <!-- Estado de carga -->
+                <div class="loading-state" id="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Cargando nuestras adorables mascotas...</p>
+                </div>
+                
+                <!-- Estado sin resultados -->
+                <div class="no-results-state" id="no-results-state" style="display: none;">
+                    <div class="no-results-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No encontramos mascotas con esos criterios</h3>
+                    <p>Intenta ajustar los filtros o <button onclick="limpiarFiltros()" class="link-btn">limpiar la búsqueda</button></p>
+                </div>
+                
+                <!-- Paginación -->
+                <div class="pagination-container">
+                    <div class="pagination" id="pagination">
+                        <button class="page-btn prev" id="prev-page" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                            Anterior
+                        </button>
+                        <div class="page-numbers" id="page-numbers">
+                            <!-- Números de página se generan dinámicamente -->
+                        </div>
+                        <button class="page-btn next" id="next-page">
+                            Siguiente
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="pagination-info">
+                        Mostrando <span id="showing-range">1-12</span> de <span id="total-mascotas">0</span> mascotas
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso de adopción -->
+        <section class="proceso-section" id="proceso-adopcion">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">100% Digital</span>
+                    <h2 class="section-title">Adopción Digital Moderna</h2>
+                    <p class="section-subtitle">
+                        Proceso completamente digitalizado - Solo vas a recoger tu mascota. 
+                        De 2 minutos a 10 minutos promedio.
+                    </p>
+                </div>
+                
+                <div class="proceso-timeline">
+                    <div class="proceso-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>IA Encuentra tu Match</h4>
+                            <p>Nuestro algoritmo analiza tu perfil y encuentra mascotas compatibles cerca de ti. Resultados instantáneos.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">IA Avanzada</span>
+                                <span class="feature-tag">Geolocalización</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="proceso-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Conecta Directamente</h4>
+                            <p>Chat en tiempo real con la organización. Intercambia fotos, videos y conoce la historia de tu futura mascota.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">Chat en Vivo</span>
+                                <span class="feature-tag">Videollamada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="proceso-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Documentación Digital</h4>
+                            <p>Completa formularios online, verificación automática y aprobación digital. Todo desde tu teléfono.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">Verificación Auto</span>
+                                <span class="feature-tag">Firma Digital</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="proceso-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Solo Vas a Recoger</h4>
+                            <p>Todo listo. GPS te guía a la ubicación, papeleo completo. Solo recoges a tu nueva familia.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">GPS Integrado</span>
+                                <span class="feature-tag">Listo para Casa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="proceso-cta">
+                    <h3>¿Listo para revolucionar tu adopción?</h3>
+                    <p>Prueba nuestra IA y encuentra tu match perfecto en minutos</p>
+                    <div class="cta-buttons">
+                        <a href="adopcion-express.html" class="cta-btn primary">
+                            <i class="fas fa-robot"></i>
+                            Probar IA Gratis
+                        </a>
+                        <a href="#catalogo-mascotas" class="cta-btn secondary">
+                            <i class="fas fa-search"></i>
+                            Explorar Catálogo
+                        </a>
+                    </div>
+                    <div class="proceso-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Éxito con IA</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3min</span>
+                            <span class="stat-label">Tiempo promedio</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historias de éxito -->
+        <section class="historias-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Historias reales</span>
+                    <h2 class="section-title">Adopciones que Transforman Vidas</h2>
+                    <p class="section-subtitle">
+                        Conoce las historias de nuestras adopciones exitosas y cómo nuestras mascotas 
+                        han encontrado el amor verdadero
+                    </p>
+                </div>
+                
+                <div class="historias-grid">
+                    <div class="historia-card">
+                        <div class="historia-imagen">
+                            <img src="../assets/images/Sam.jpg" alt="Sam - Historia de adopción" loading="lazy">
+                            <div class="historia-overlay">
+                                <span class="historia-badge">Adoptada</span>
+                            </div>
+                        </div>
+                        <div class="historia-content">
+                            <h4>Sam encontró su compañera perfecta</h4>
+                            <p class="historia-quote">
+                                "Sam llegó a mi vida hace 8 meses después de ser rescatada. 
+                                Su transformación ha sido increíble. No podría estar más feliz."
+                            </p>
+                            <div class="historia-autor">
+                                <div class="autor-info">
+                                    <strong>Luisa Mendez</strong>
+                                    <span>Adoptó a Sam en marzo 2024</span>
+                                </div>
+                                <div class="historia-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="historia-card">
+                        <div class="historia-imagen">
+                            <img src="../assets/images/mestizo.jpg" alt="Pancho - Historia de adopción" loading="lazy">
+                            <div class="historia-overlay">
+                                <span class="historia-badge">Adoptado</span>
+                            </div>
+                        </div>
+                        <div class="historia-content">
+                            <h4>Pancho, el compañero aventurero</h4>
+                            <p class="historia-quote">
+                                "Buscábamos un perro activo para acompañar a nuestros hijos en sus aventuras. 
+                                Pancho no solo cumplió nuestras expectativas, las superó. Es leal, protector 
+                                y lleno de energía positiva."
+                            </p>
+                            <div class="historia-autor">
+                                <div class="autor-info">
+                                    <strong>Carlos Ramírez</strong>
+                                    <span>Adoptó a Pancho en enero 2025</span>
+                                </div>
+                                <div class="historia-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="historia-card">
+                        <div class="historia-imagen">
+                            <img src="../assets/images/buster.jpeg" alt="Buster - Historia de adopción" loading="lazy">
+                            <div class="historia-overlay">
+                                <span class="historia-badge">Adoptada</span>
+                            </div>
+                        </div>
+                        <div class="historia-content">
+                            <h4>Buster, amor en la tercera edad</h4>
+                            <p class="historia-quote">
+                                "Como persona mayor, necesitaba una compañía tranquila y cariñosa. 
+                                Buster es exactamente lo que mi corazón necesitaba. Su presencia llena 
+                                mi hogar de paz y alegría."
+                            </p>
+                            <div class="historia-autor">
+                                <div class="autor-info">
+                                    <strong>Ana López</strong>
+                                    <span>Adoptó a Buster en febrero 2024</span>
+                                </div>
+                                <div class="historia-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="historias-cta">
+                    <p>¿Quieres ser parte de nuestras próximas historias de éxito?</p>
+                    <a href="contacto.html" class="secondary-btn">
+                        <i class="fas fa-heart"></i>
+                        Compartir tu Historia
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Final -->
+        <section class="final-cta-section">
+            <div class="cta-background">
+                <div class="cta-overlay"></div>
+            </div>
+            
+            <div class="section-container">
+                <div class="final-cta-content">
+                    <h2>Tu Compañero de Vida te Está Esperando</h2>
+                    <p>
+                        Cada día que pasa es una oportunidad perdida de crear momentos inolvidables 
+                        con tu nueva mascota. No esperes más.
+                    </p>
+                    
+                    <div class="cta-actions">
+                        <a href="#catalogo-mascotas" class="cta-btn primary large">
+                            <i class="fas fa-search"></i>
+                            <span>Explorar Mascotas Ahora</span>
+                        </a>
+                        <a href="contacto.html" class="cta-btn secondary large">
+                            <i class="fas fa-phone"></i>
+                            <span>Contactar Ahora</span>
+                        </a>
+                    </div>
+                    
+                    <div class="urgency-message">
+                        <i class="fas fa-clock"></i>
+                        <span>Más de 20 mascotas fueron adoptadas esta semana</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para perfil de mascota -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content" id="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido del perfil se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts principales -->
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+    <script src="../adopciones-moderno.js" defer></script>
+</body>
+</html>

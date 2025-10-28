@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Sincronización - PETHOUSE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background: #2563eb;
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+        .status.success {
+            background: #f0fdf4;
+            border-color: #22c55e;
+            color: #15803d;
+        }
+        .status.error {
+            background: #fef2f2;
+            border-color: #ef4444;
+            color: #dc2626;
+        }
+        .status.info {
+            background: #f0f9ff;
+            border-color: #3b82f6;
+            color: #1d4ed8;
+        }
+        .links {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        .links a:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test de Sincronización PETHOUSE</h1>
+        <p>Esta página te permite probar la sincronización entre el formulario de registro y el panel de administración.</p>
+        
+        <div id="status"></div>
+        
+        <h3>🔧 Acciones de Prueba:</h3>
+        
+        <button class="test-button" onclick="crearSolicitudPrueba()">
+            ➕ Crear Solicitud de Prueba
+        </button>
+        
+        <button class="test-button" onclick="verificarSolicitudes()">
+            📋 Verificar Solicitudes
+        </button>
+        
+        <button class="test-button" onclick="limpiarDatos()">
+            🗑️ Limpiar Todas las Solicitudes
+        </button>
+        
+        <button class="test-button" onclick="simularEnvio()">
+            📤 Simular Envío de Formulario
+        </button>
+        
+        <div class="links">
+            <h3>🔗 Enlaces Útiles:</h3>
+            <a href="registro-organizacion.html" target="_blank">📝 Formulario de Registro</a>
+            <a href="admin-organizaciones.html" target="_blank">⚙️ Panel de Administración</a>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="../organizaciones-api.js"></script>
+    
+    <script>
+        function mostrarStatus(mensaje, tipo = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${tipo}">${mensaje}</div>`;
+        }
+
+        function crearSolicitudPrueba() {
+            const solicitudPrueba = {
+                id: 'TEST-' + Date.now(),
+                numeroSolicitud: 'TEST-' + Date.now(),
+                fechaSolicitud: new Date().toISOString(),
+                estado: 'pendiente',
+                nombreOrganizacion: 'Organización de Prueba ' + new Date().toLocaleTimeString(),
+                tipoOrganizacion: 'refugio',
+                descripcion: 'Esta es una organización creada para testing de sincronización',
+                añoFundacion: 2024,
+                numeroMascotas: Math.floor(Math.random() * 50) + 1,
+                personaContacto: 'Usuario Test',
+                emailContacto: 'test@ejemplo.com',
+                telefonoContacto: '555-0123',
+                direccion: 'Dirección de prueba 123',
+                origen: 'test_page'
+            };
+
+            // Guardar en localStorage
+            const solicitudes = JSON.parse(localStorage.getItem('pethouse_solicitudes_organizaciones') || '[]');
+            solicitudes.push(solicitudPrueba);
+            localStorage.setItem('pethouse_solicitudes_organizaciones', JSON.stringify(solicitudes));
+
+            // Disparar evento
+            const evento = new CustomEvent('solicitudEnviada', {
+                detail: {
+                    solicitud: solicitudPrueba,
+                    timestamp: new Date().toISOString(),
+                    totalSolicitudes: solicitudes.length
+                }
+            });
+            window.dispatchEvent(evento);
+
+            mostrarStatus(`✅ Solicitud creada: "${solicitudPrueba.nombreOrganizacion}" (Total: ${solicitudes.length})`, 'success');
+        }
+
+        function verificarSolicitudes() {
+            const solicitudes = JSON.parse(localStorage.getItem('pethouse_solicitudes_organizaciones') || '[]');
+            
+            const stats = {
+                total: solicitudes.length,
+                pendientes: solicitudes.filter(s => s.estado === 'pendiente').length,
+                aprobadas: solicitudes.filter(s => s.estado === 'aprobada').length,
+                rechazadas: solicitudes.filter(s => s.estado === 'rechazada').length
+            };
+
+            mostrarStatus(`
+                📊 <strong>Estado de Solicitudes:</strong><br>
+                Total: ${stats.total} | 
+                Pendientes: ${stats.pendientes} | 
+                Aprobadas: ${stats.aprobadas} | 
+                Rechazadas: ${stats.rechazadas}
+            `, 'info');
+        }
+
+        function limpiarDatos() {
+            if (confirm('¿Estás seguro de que quieres eliminar todas las solicitudes?')) {
+                localStorage.removeItem('pethouse_solicitudes_organizaciones');
+                mostrarStatus('🗑️ Todos los datos han sido eliminados', 'info');
+            }
+        }
+
+        async function simularEnvio() {
+            const datosSimulados = {
+                nombreOrganizacion: 'Refugio Simulado ' + new Date().toLocaleTimeString(),
+                tipoOrganizacion: 'refugio',
+                descripcion: 'Refugio simulado para testing de sincronización entre formulario y panel de admin',
+                añoFundacion: '2023',
+                numeroMascotas: '25',
+                personaContacto: 'Contacto Simulado',
+                cargoContacto: 'Director',
+                emailContacto: 'simulado@test.com',
+                telefonoContacto: '+52 55 1234-5678',
+                direccion: 'Dirección simulada 456',
+                sitioWeb: 'https://www.test.com',
+                registroOficial: 'RFC: TEST123',
+                aceptarTerminos: true,
+                aceptarPoliticas: true,
+                aceptarComunicaciones: true
+            };
+
+            try {
+                mostrarStatus('📤 Simulando envío de formulario...', 'info');
+                
+                if (typeof window.enviarSolicitudOrganizacion === 'function') {
+                    const resultado = await window.enviarSolicitudOrganizacion(datosSimulados);
+                    
+                    if (resultado.success) {
+                        mostrarStatus(`✅ Simulación exitosa: ${resultado.data.mensaje}<br>
+                                     Número: ${resultado.data.numeroSolicitud}`, 'success');
+                    } else {
+                        mostrarStatus(`❌ Error en simulación: ${resultado.error}`, 'error');
+                    }
+                } else {
+                    mostrarStatus('❌ Función enviarSolicitudOrganizacion no disponible', 'error');
+                }
+            } catch (error) {
+                mostrarStatus(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('solicitudEnviada', (event) => {
+            console.log('🔔 Evento detectado en página de test:', event.detail);
+        });
+
+        // Verificar estado inicial
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarStatus('🚀 Sistema de testing iniciado. Usa los botones para probar la funcionalidad.', 'info');
+            verificarSolicitudes();
+        });
+    </script>
+</body>
+</html>

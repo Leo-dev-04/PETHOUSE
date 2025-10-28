@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog PETHOUSE - Consejos y Noticias sobre Adopción de Mascotas</title>
+    <meta name="description" content="Descubre consejos sobre cuidado de mascotas, historias de adopción exitosas y noticias del mundo animal en el blog oficial de PETHOUSE.">
+    <meta name="keywords" content="blog mascotas, consejos adopcion, cuidado animal, historias adopcion, noticias animales, PETHOUSE blog">
+    <meta name="author" content="PETHOUSE">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pethouse.com/blog.html">
+    <meta property="og:title" content="Blog PETHOUSE - Consejos y Noticias sobre Adopción">
+    <meta property="og:description" content="Consejos, historias y noticias sobre adopción de mascotas y cuidado animal.">
+    <meta property="og:image" content="../assets/images/inicio.jpeg">
+    <meta property="og:site_name" content="PETHOUSE">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pethouse.com/blog.html">
+    <meta property="twitter:title" content="Blog PETHOUSE - Consejos y Noticias sobre Adopción">
+    <meta property="twitter:description" content="Consejos, historias y noticias sobre adopción de mascotas y cuidado animal.">
+    <meta property="twitter:image" content="../assets/images/inicio.jpeg">
+    
+    <!-- SEO adicional -->
+    <link rel="canonical" href="https://pethouse.com/blog.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4a7c59">
+    
+    <!-- PETHOUSE CSS Moderno -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="../performance.css">
+    <link rel="stylesheet" href="../alertas-modales.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/LOGO.jpg">
+</head>
+<body class="blog-page">
+    <!-- Barra Superior con Redes Sociales -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="contact-info">
+                    <i class="fas fa-phone"></i> +52 746 130 19 92
+                </span>
+                <span class="contact-info">
+                    <i class="fas fa-envelope"></i> contacto@pethouse.com
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <span class="follow-text">Síguenos:</span>
+                <div class="social-icons-top">
+                    <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" rel="noopener" class="social-icon facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pethouse_mexico?igsh=MWY5am1qamprcXlsdg==" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5255123456789" target="_blank" rel="noopener" class="social-icon whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://twitter.com/pethouse_mx" target="_blank" rel="noopener" class="social-icon twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@pethouse.oficial" target="_blank" rel="noopener" class="social-icon tiktok" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">🐾</div>
+                <h1 class="brand-name">PETHOUSE</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="adopciones.html" class="nav-link"><i class="fas fa-heart"></i> Adopciones</a>
+                <a href="galeria.html" class="nav-link"><i class="fas fa-images"></i> Mascotas</a>
+                <a href="servicios.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                <a href="nosotros.html" class="nav-link"><i class="fas fa-info-circle"></i> Nosotros</a>
+                <a href="blog.html" class="nav-link active"><i class="fas fa-blog"></i> Blog</a>
+                <a href="tienda.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Tienda</a>
+                <a href="login.html" class="nav-link login-btn"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section Blog -->
+    <section class="blog-hero">
+        <div class="blog-hero-container">
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title">
+                    Blog <span class="highlight">PETHOUSE</span>
+                </h1>
+                <p class="blog-hero-subtitle">
+                    Consejos, historias y noticias sobre adopción de mascotas, cuidado animal y el mundo de nuestros compañeros peludos.
+                </p>
+                <div class="blog-categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-globe"></i> Todos
+                    </button>
+                    <button class="category-btn" data-category="consejos">
+                        <i class="fas fa-lightbulb"></i> Consejos
+                    </button>
+                    <button class="category-btn" data-category="historias">
+                        <i class="fas fa-heart"></i> Historias
+                    </button>
+                    <button class="category-btn" data-category="salud">
+                        <i class="fas fa-stethoscope"></i> Salud
+                    </button>
+                    <button class="category-btn" data-category="noticias">
+                        <i class="fas fa-newspaper"></i> Noticias
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="featured-container">
+            <div class="featured-badge">
+                <i class="fas fa-star"></i>
+                <span>Artículo Destacado</span>
+            </div>
+            <article class="featured-post">
+                <div class="featured-image">
+                    <img src="../assets/images/inicio.jpeg" alt="Artículo destacado sobre adopción responsable" onerror="this.src='../assets/images/perrofeliz.webp'">
+                    <div class="featured-overlay">
+                        <div class="featured-category">Consejos</div>
+                        <div class="featured-date">
+                            <i class="fas fa-calendar"></i>
+                            15 de Octubre, 2025
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <h2 class="featured-title">Guía Completa para una Adopción Responsable: Todo lo que Necesitas Saber</h2>
+                    <p class="featured-excerpt">
+                        Adoptar una mascota es una decisión importante que cambiará tu vida para siempre. En esta guía completa, te explicamos paso a paso cómo prepararte para recibir a tu nuevo compañero, desde la elección correcta hasta los primeros días en casa.
+                    </p>
+                    <div class="featured-meta">
+                        <div class="author-info">
+                            <img src="../assets/images/autor-blog.jpg" alt="Dr. María González - Veterinaria PETHOUSE" class="author-avatar" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="author-details">
+                                <span class="author-name">Dr. María González</span>
+                                <span class="author-role">Veterinaria Especialista</span>
+                            </div>
+                        </div>
+                        <div class="article-stats">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                8 min lectura
+                            </span>
+                            <span class="article-views">
+                                <i class="fas fa-eye"></i>
+                                2,341 vistas
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="read-more-btn">
+                        <span>Leer Artículo Completo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="blog-container">
+            <div class="blog-content">
+                <div class="blog-posts">
+                    <!-- Post 1 -->
+                    <article class="blog-post" data-category="historias">
+                        <div class="post-image">
+                            <img src="../assets/images/perro.png" alt="Historia de adopción - Max encuentra su hogar" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Historias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    12 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">La Increíble Historia de Max: De Refugio a Héroe de Terapia</h3>
+                            <p class="post-excerpt">
+                                Max era un perro tímido que pasó meses en el refugio. Hoy, es un perro de terapia certificado que ayuda a niños en hospitales. Descubre su inspiradora transformación.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Equipo PETHOUSE
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-post" data-category="consejos">
+                        <div class="post-image">
+                            <img src="../assets/images/gata.jpg" alt="Consejos para preparar tu hogar para un gato" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Consejos</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    10 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    7 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">Preparando tu Hogar para tu Nuevo Gato: Lista de Verificación Completa</h3>
+                            <p class="post-excerpt">
+                                Los gatos tienen necesidades específicas. Te compartimos una lista detallada de todo lo que necesitas para que tu felino se sienta cómodo desde el primer día.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Dr. Carlos Ruiz
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-post" data-category="salud">
+                        <div class="post-image">
+                            <img src="../assets/images/perro2.webp" alt="Vacunas esenciales para tu mascota" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Salud</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    8 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    6 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">Calendario de Vacunación: Protege a tu Mascota Correctamente</h3>
+                            <p class="post-excerpt">
+                                Un cronograma completo de vacunación es esencial para la salud de tu mascota. Conoce cuáles son las vacunas obligatorias y opcionales para perros y gatos.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Dra. Ana Martínez
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-post" data-category="noticias">
+                        <div class="post-image">
+                            <img src="../assets/images/inicio.jpeg" alt="Campaña nacional de adopción 2025" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Noticias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    5 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    4 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">PETHOUSE Lanza Campaña Nacional "Hogar para Todos" 2025</h3>
+                            <p class="post-excerpt">
+                                Nuestra nueva campaña busca facilitar 2,000 adopciones durante los próximos meses, conectando más organizaciones con familias adoptivas en todo México.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Comunicaciones PETHOUSE
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-post" data-category="consejos">
+                        <div class="post-image">
+                            <img src="../assets/images/perrofeliz.webp" alt="Entrenamiento básico para cachorros" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Consejos</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    3 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    9 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">Entrenamiento Básico para Cachorros: Primeros Comandos Esenciales</h3>
+                            <p class="post-excerpt">
+                                El entrenamiento temprano es clave para un cachorro bien educado. Aprende las técnicas básicas de refuerzo positivo para enseñar comandos fundamentales.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Trainer José López
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-post" data-category="historias">
+                        <div class="post-image">
+                            <img src="../assets/images/coco.jpg" alt="Historia de adopción de Coco el hámster" onerror="this.src='../assets/images/perrofeliz.webp'">
+                            <div class="post-category">Historias</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fas fa-calendar"></i>
+                                    1 de Octubre, 2025
+                                </span>
+                                <span class="post-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    3 min
+                                </span>
+                            </div>
+                            <h3 class="post-title">Coco y su Nueva Familia: Cuando las Mascotas Pequeñas Traen Gran Alegría</h3>
+                            <p class="post-excerpt">
+                                Los hámsters también necesitan amor. Conoce cómo Coco, un pequeño hámster dorado, transformó completamente la rutina de la familia González.
+                            </p>
+                            <div class="post-footer">
+                                <div class="post-author">
+                                    <i class="fas fa-user"></i>
+                                    Familia González
+                                </div>
+                                <a href="#" class="read-more">
+                                    Leer más <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3 class="widget-title">
+                            <i class="fas fa-envelope"></i>
+                            Newsletter PETHOUSE
+                        </h3>
+                        <p class="widget-description">
+                            Recibe consejos semanales sobre cuidado de mascotas y noticias sobre adopciones.
+                        </p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Suscribirse
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget popular-posts-widget">
+                        <h3 class="widget-title">
+                            <i class="fas fa-fire"></i>
+                            Artículos Populares
+                        </h3>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="../assets/images/perro.png" alt="Artículo popular" onerror="this.src='../assets/images/perrofeliz.webp'">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4>Cómo Elegir la Mascota Perfecta para tu Familia</h4>
+                                    <span class="popular-post-date">28 Sep 2025</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="../assets/images/gata.jpg" alt="Artículo popular" onerror="this.src='../assets/images/perrofeliz.webp'">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4>Primeros Auxilios Básicos para Mascotas</h4>
+                                    <span class="popular-post-date">25 Sep 2025</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="../assets/images/perro2.webp" alt="Artículo popular" onerror="this.src='../assets/images/perrofeliz.webp'">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4>Nutrición Balanceada: Alimenta Bien a tu Mascota</h4>
+                                    <span class="popular-post-date">22 Sep 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget tags-widget">
+                        <h3 class="widget-title">
+                            <i class="fas fa-tags"></i>
+                            Etiquetas Populares
+                        </h3>
+                        <div class="tags-cloud">
+                            <span class="tag">#Adopción</span>
+                            <span class="tag">#Cachorros</span>
+                            <span class="tag">#Gatos</span>
+                            <span class="tag">#Salud</span>
+                            <span class="tag">#Entrenamiento</span>
+                            <span class="tag">#Nutrición</span>
+                            <span class="tag">#Cuidados</span>
+                            <span class="tag">#Veterinaria</span>
+                            <span class="tag">#Consejos</span>
+                            <span class="tag">#Historias</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>Cargar Más Artículos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>¿Te Encanta Leer Sobre Mascotas?</h2>
+                    <p>Suscríbete a nuestro newsletter y recibe los mejores consejos, historias y noticias del mundo animal directamente en tu email.</p>
+                </div>
+                <form class="newsletter-form-main">
+                    <input type="email" placeholder="Ingresa tu email" class="newsletter-input-main" required>
+                    <button type="submit" class="newsletter-btn-main">
+                        <i class="fas fa-paper-plane"></i>
+                        Suscribirse Gratis
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo">🐾</span>
+                        <span class="brand-name">PETHOUSE</span>
+                    </div>
+                    <p>Conectando corazones con patitas desde 2022</p>
+                    <div class="social-links">
+                        <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" rel="noopener" class="social-link facebook" title="Síguenos en Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/pethouse_mexico?igsh=MWY5am1qamprcXlsdg==" target="_blank" rel="noopener" class="social-link instagram" title="Síguenos en Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://wa.me/7461301992" target="_blank" rel="noopener" class="social-link whatsapp" title="Contáctanos por WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://twitter.com/pethouse_mx" target="_blank" rel="noopener" class="social-link twitter" title="Síguenos en Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@pethouse.oficial" target="_blank" rel="noopener" class="social-link tiktok" title="Síguenos en TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Adopciones</h4>
+                        <a href="adopciones.html">Ver Mascotas</a>
+                        <a href="galeria.html">Explorar Mascotas</a>
+                        <a href="login.html">Iniciar Sesión</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <a href="servicios.html">Veterinaria</a>
+                        <a href="servicios.html">Cuidado</a>
+                        <a href="servicios.html">Entrenamiento</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PETHOUSE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/7461301992?text=Hola%20PETHOUSE,%20me%20interesa%20saber%20más%20sobre%20consejos%20de%20mascotas" 
+            target="_blank" 
+            rel="noopener" 
+            class="whatsapp-btn"
+            title="Chatea con nosotros por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">¿Necesitas consejos?</span>
+        </a>
+    </div>
+
+    <!-- Scripts PETHOUSE -->
+    <script src="../pethouse-master.js"></script>
+    <script src="../pethouse-interactive.js"></script>
+    <script src="../formularios-funcional.js"></script>
+    <script>
+        // Blog functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category filtering
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const blogPosts = document.querySelectorAll('.blog-post');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter posts
+                    blogPosts.forEach(post => {
+                        if (category === 'all' || post.dataset.category === category) {
+                            post.style.display = 'block';
+                            post.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Newsletter form
+            const newsletterForms = document.querySelectorAll('.newsletter-form, .newsletter-form-main');
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const input = this.querySelector('input[type="email"]');
+                    const email = input.value;
+                    
+                    if (email) {
+                        alert('¡Gracias por suscribirte! Pronto recibirás nuestros mejores consejos sobre mascotas.');
+                        input.value = '';
+                    }
+                });
+            });
+
+            // Load more functionality
+            const loadMoreBtn = document.querySelector('.load-more-btn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Cargando...';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-plus"></i> <span>Cargar Más Artículos</span>';
+                        alert('Más artículos se cargarían aquí en una implementación completa.');
+                    }, 1500);
+                });
+            }
+
+            // Smooth scroll for read more buttons
+            const readMoreBtns = document.querySelectorAll('.read-more, .read-more-btn');
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // En una implementación real, esto abriría el artículo completo
+                    alert('El artículo completo se abriría aquí en una implementación completa.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* PETHOUSE PERFORMANCE OPTIMIZATIONS */
+
+/* Optimización de animaciones */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Critical CSS inlining - Estilos críticos para el header */
+.header-modern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
+    contain: layout style paint;
+}
+
+/* Web Vitals optimizations */
+.hero-image {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Reduce layout shift */
+.pet-card {
+    aspect-ratio: 4/3;
+    contain: layout;
+}

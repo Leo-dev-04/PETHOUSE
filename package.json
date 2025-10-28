@@ -1,0 +1,54 @@
+{
+  "name": "pethouse",
+  "version": "1.0.0",
+  "description": "PETHOUSE - Plataforma de adopción de mascotas",
+  "main": "public/pages/index.html",
+  "scripts": {
+    "dev": "live-server public --port=3000 --open=/pages/",
+    "start": "npm run dev",
+    "server": "node server-mysql.js",
+    "server:dev": "nodemon server-mysql.js",
+    "db:seed": "node scripts/seed-database-mysql.js",
+    "db:check": "node scripts/verificar-mysql.js",
+    "tienda": "cd public && node server-tienda.js",
+    "tienda:dev": "cd public && nodemon server-tienda.js"
+  },
+  "keywords": [
+    "mascotas",
+    "adopcion",
+    "pethouse",
+    "animales",
+    "rescate"
+  ],
+  "author": "Equipo PETHOUSE",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usuario/pethouse.git"
+  },
+  "homepage": "https://pethouse.com",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "bugs": {
+    "url": "https://github.com/usuario/pethouse/issues"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.1",
+    "sequelize": "^6.37.7"
+  }
+}

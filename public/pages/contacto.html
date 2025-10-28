@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Principal -->
+    <title>Contacto | PETHOUSE México - Conectamos Contigo</title>
+    <meta name="description" content="Contáctanos en PETHOUSE México. Adopción, voluntariado, donaciones y reportes de rescate. Estamos aquí para ayudarte en Chicontepec, Veracruz.">
+    <meta name="keywords" content="contacto PETHOUSE, adopción mascotas Veracruz, voluntarios animales, donaciones México, rescate animal">
+    <meta name="author" content="PETHOUSE México">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Contacto PETHOUSE México - Tu Canal de Comunicación">
+    <meta property="og:description" content="Escríbenos para adopción, voluntariado, donaciones o reportar animales en peligro. Estamos en Chicontepec, Veracruz.">
+    <meta property="og:image" content="../assets/images/LOGO.jpg">
+    <meta property="og:url" content="https://pethouse-mexico.com/contacto">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto PETHOUSE México">
+    <meta name="twitter:description" content="Tu canal directo para adopción, voluntariado y ayuda animal en Veracruz">
+    <meta name="twitter:image" content="../assets/images/LOGO.jpg">
+    
+    <!-- CSS Optimizado -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../contacto-moderno.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/LOGO.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/LOGO.jpg">
+</head>
+    <body>
+    <div class="contacto-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="brand-section">
+                    <div class="brand-logo">
+                        <i class="fas fa-home"></i>
+                        <h1>PETHOUSE México</h1>
+                    </div>
+                    <p class="brand-subtitle">Conectando corazones, transformando vidas</p>
+                </div>
+                
+                <div class="hero-text">
+                    <h2>¡Hablemos!</h2>
+                    <p>Estamos aquí para ayudarte en tu viaje de adopción responsable, voluntariado o cualquier consulta sobre nuestros amigos peludos.</p>
+                </div>
+
+                <div class="quick-actions">
+                    <button class="quick-btn" data-action="adopcion">
+                        <i class="fas fa-heart"></i>
+                        <span>Quiero Adoptar</span>
+                    </button>
+                    <button class="quick-btn" data-action="urgente">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Emergencia Animal</span>
+                    </button>
+                    <button class="quick-btn" data-action="voluntario">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Ser Voluntario</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="floating-elements">
+                    <div class="floating-icon paw-1">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="floating-icon heart-1">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="floating-icon paw-2">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Contact Form Section -->
+            <div class="form-section">
+                <div class="section-header">
+                    <h3>
+                        <i class="fas fa-envelope"></i>
+                        Envíanos un mensaje
+                    </h3>
+                    <p>Completa el formulario y te responderemos lo antes posible</p>
+                </div>
+
+                <form id="form-contacto" class="contacto-form">
+                    <!-- Datos personales -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i class="fas fa-user"></i>
+                                Nombre completo
+                            </label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Correo electrónico
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">
+                                <i class="fas fa-phone"></i>
+                                Teléfono (opcional)
+                            </label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+52 746 130 19 92">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivo">
+                                <i class="fas fa-tag"></i>
+                                Motivo de contacto
+                            </label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="adopcion">🏠 Quiero adoptar - Conectar con organización específica</option>
+                                <option value="donacion">💰 Información sobre donaciones</option>
+                                <option value="voluntario">🤝 Quiero ser voluntario</option>
+                                <option value="rescate">🚨 Reportar animal en peligro - URGENTE</option>
+                                <option value="visita">📅 Programar una visita a PETHOUSE</option>
+                                <option value="seguimiento">📋 Seguimiento de adopción</option>
+                                <option value="colaboracion">🤝 Propuesta de colaboración con organizaciones</option>
+                                <option value="general">💬 Consulta general</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Urgencia (solo para rescates) -->
+                    <div class="form-group urgencia-group" style="display: none;">
+                        <label for="urgencia">
+                            <i class="fas fa-exclamation-circle"></i>
+                            Nivel de urgencia
+                        </label>
+                        <select id="urgencia" name="urgencia">
+                            <option value="baja">🟢 Baja - Situación estable</option>
+                            <option value="media">🟡 Media - Necesita atención pronto</option>
+                            <option value="alta">🔴 Alta - Requiere atención inmediata</option>
+                            <option value="critica">🆘 Crítica - Emergencia vital</option>
+                        </select>
+                    </div>
+
+                    <!-- Ubicación (para rescates y visitas) -->
+                    <div class="form-group ubicacion-group" style="display: none;">
+                        <label for="ubicacion">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Ubicación
+                        </label>
+                        <input type="text" id="ubicacion" name="ubicacion" placeholder="Dirección o ubicación específica">
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">
+                            <i class="fas fa-comment-alt"></i>
+                            Mensaje
+                        </label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..." required rows="5"></textarea>
+                        <div class="char-counter">
+                            <span class="current">0</span>/<span class="max">500</span> caracteres
+                        </div>
+                    </div>
+
+                    <!-- Adjuntos (para rescates) -->
+                    <div class="form-group adjuntos-group" style="display: none;">
+                        <label for="adjuntos">
+                            <i class="fas fa-paperclip"></i>
+                            Fotos del animal (opcional)
+                        </label>
+                        <div class="file-upload-area" id="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Arrastra fotos aquí o <span class="upload-link">haz clic para seleccionar</span></p>
+                            <input type="file" id="adjuntos" name="adjuntos" multiple accept="image/*" hidden>
+                        </div>
+                        <div class="uploaded-files"></div>
+                    </div>
+
+                    <!-- Opciones adicionales -->
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" name="copy_email">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Enviarme una copia del mensaje a mi email</span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" name="newsletter">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Quiero recibir noticias y actualizaciones de PETHOUSE</span>
+                        </label>
+                    </div>
+
+                    <!-- Botón enviar -->
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Enviar mensaje</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info-section">
+                <div class="info-cards-container">
+                    <!-- Contact Info - Principal -->
+                    <div class="info-card contact-info primary-card">
+                        <h3>
+                            <i class="fas fa-info-circle"></i>
+                            Información de contacto
+                        </h3>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Ubicación</h4>
+                                    <p>Instituto Tecnológico Superior de Chicontepec</p>
+                                    <span>Chicontepec, Veracruz, México</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Emergencias</h4>
+                                    <p><strong>+52 746 130 19 92</strong></p>
+                                    <span>Solo rescates urgentes</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>contacto@pethouse-mexico.com</p>
+                                    <span>Respuesta en 24-48 horas</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Horario</h4>
+                                    <p><strong>Martes a Domingo</strong></p>
+                                    <span>10:30 a.m. - 3:30 p.m.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="info-card stats-card">
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            Nuestro impacto
+                        </h3>
+                        
+                        <div class="stats-showcase">
+                            <div class="stat-highlight">
+                                <div class="stat-number">2,500+</div>
+                                <div class="stat-label">Adopciones exitosas</div>
+                            </div>
+                            
+                            <div class="stats-mini">
+                                <div class="mini-stat">
+                                    <span class="mini-number">150+</span>
+                                    <span class="mini-label">Rescates 2025</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="mini-number">98%</span>
+                                    <span class="mini-label">Familias felices</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="mini-number">24/7</span>
+                                    <span class="mini-label">Emergencias</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donation Methods -->
+                    <div class="info-card donation-card">
+                        <h3>
+                            <i class="fas fa-heart"></i>
+                            Apoya nuestra misión
+                        </h3>
+                        <p class="donation-text">Cada donación salva vidas</p>
+                        
+                        <div class="donation-options">
+                            <div class="donation-method">
+                                <i class="fab fa-cc-visa"></i>
+                                <span>Tarjetas</span>
+                            </div>
+                            <div class="donation-method">
+                                <i class="fas fa-university"></i>
+                                <span>SPEI</span>
+                            </div>
+                            <div class="donation-method">
+                                <i class="fas fa-store"></i>
+                                <span>OXXO</span>
+                            </div>
+                            <div class="donation-method">
+                                <i class="fab fa-paypal"></i>
+                                <span>PayPal</span>
+                            </div>
+                        </div>
+
+                        <button class="btn-donate">
+                            <i class="fas fa-gift"></i>
+                            Donar ahora
+                        </button>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="info-card faq-card">
+                        <h3>
+                            <i class="fas fa-question-circle"></i>
+                            Preguntas frecuentes
+                        </h3>
+                        
+                        <div class="faq-compact">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-chevron-right"></i>
+                                    ¿Cómo funciona el proceso de adopción?
+                                </div>
+                                <div class="faq-answer">
+                                    <strong>Adopciones específicas:</strong> Te conectamos directamente con la organización responsable de cada mascota para chat en vivo y proceso completo.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-chevron-right"></i>
+                                    ¿Pueden recibir una mascota?
+                                </div>
+                                <div class="faq-answer">
+                                    Sí, tenemos espacio para rescates. Podemos recibirla o ayudarte a encontrarle un hogar a través de nuestras redes.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-chevron-right"></i>
+                                    ¿Cómo ser voluntario?
+                                </div>
+                                <div class="faq-answer">
+                                    Visítanos los fines de semana para pasear, bañar y jugar con nuestros rescatados. Contáctanos para coordinar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation back -->
+        <div class="navigation-back">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Volver al inicio
+            </a>
+        </div>
+    </div>
+    <!-- Scripts principales -->
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+    <script src="../contacto-moderno.js" defer></script>
+</body>
+</html>

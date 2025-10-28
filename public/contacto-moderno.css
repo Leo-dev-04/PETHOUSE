@@ -1,0 +1,1424 @@
+/* ========================================
+   CONTACTO MODERNO - PETHOUSE MÉXICO V2.0
+   Diseño completamente renovado y moderno
+======================================== */
+
+/* Variables CSS modernas y vibrantes */
+:root {
+  /* Paleta moderna con gradientes vibrantes */
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #60a5fa;
+  --secondary-color: #10b981;
+  --accent-color: #f59e0b;
+  --accent-pink: #ec4899;
+  
+  /* Colores de texto modernos */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-white: #ffffff;
+  
+  /* Fondos modernos */
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.25);
+  --bg-card: rgba(255, 255, 255, 0.95);
+  
+  /* Gradientes modernos */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-cool: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  
+  /* Sombras modernas */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-colored: 0 8px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* RESET Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* CONTENEDOR PRINCIPAL SIMPLIFICADO */
+.contacto-container {
+    min-height: 70vh;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+}
+
+/* HERO SECTION SIMPLIFICADO */
+.hero-section {
+    padding: 2.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    background: 
+        var(--gradient-primary),
+        url('../assets/images/fondo.webp') center/cover no-repeat;
+    background-blend-mode: overlay;
+    color: white;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENIDO HERO SIMPLIFICADO */
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* MARCA SIMPLIFICADA */
+.brand-section {
+    margin-bottom: 2rem;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.brand-logo i {
+    font-size: 3rem;
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.brand-logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.02em;
+}
+
+.brand-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* TEXTO HERO SIMPLIFICADO */
+.hero-text {
+    margin-bottom: 2.5rem;
+}
+
+.hero-text h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.03em;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 400;
+}
+
+/* ACCIONES RÁPIDAS SIMPLIFICADAS */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.quick-btn {
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.quick-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.quick-btn i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.quick-btn:hover i {
+    transform: scale(1.1);
+}
+
+.quick-btn[data-action="adopcion"] {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(219, 39, 119, 0.1));
+    border-color: rgba(236, 72, 153, 0.3);
+}
+
+.quick-btn[data-action="adopcion"] i {
+    color: #f472b6;
+}
+
+.quick-btn[data-action="urgente"] {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.1));
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.quick-btn[data-action="urgente"] i {
+    color: #fbbf24;
+}
+
+.quick-btn[data-action="voluntario"] {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.1));
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.quick-btn[data-action="voluntario"] i {
+    color: #34d399;
+}
+
+.quick-btn span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* DECORACIÓN HERO SIMPLIFICADA */
+.hero-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* ELEMENTOS FLOTANTES SIMPLIFICADOS */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.05;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.paw-1 {
+    top: 15%;
+    left: 8%;
+}
+
+.heart-1 {
+    top: 70%;
+    right: 12%;
+}
+
+.paw-2 {
+    bottom: 25%;
+    left: 15%;
+}
+
+/* CONTENIDO PRINCIPAL REORGANIZADO */
+.main-content {
+    background: #ffffff;
+    margin: -4rem 2rem 0;
+    border-radius: 32px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formulario siempre arriba */
+.form-section {
+    order: 1;
+}
+
+/* Información siempre abajo */
+.info-section {
+    order: 2;
+}
+
+/* SECCIÓN DE FORMULARIO REORGANIZADA */
+.form-section {
+    padding: 4rem 3.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+    position: relative;
+    border-bottom: 3px solid rgba(102, 126, 234, 0.1);
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f1f5f9;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.section-header h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.section-header h3 i {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.2rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* FORMULARIO SIMPLIFICADO */
+.contacto-form {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.form-group label i {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+    resize: vertical;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+/* CAMPOS CONDICIONALES SIMPLIFICADOS */
+.urgencia-group,
+.ubicacion-group,
+.adjuntos-group {
+    border-left: 4px solid #667eea;
+    padding-left: 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(102, 126, 234, 0.01) 100%);
+    border-radius: 0 12px 12px 0;
+    margin-left: -1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* CONTADOR DE CARACTERES SIMPLIFICADO */
+.char-counter {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.char-counter .current {
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.char-counter.warning .current {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.char-counter.error .current {
+    color: #ef4444;
+}
+
+/* ÁREA DE CARGA DE ARCHIVOS SIMPLIFICADA */
+.file-upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+}
+
+.file-upload-area:hover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f8fafc 0%, rgba(102, 126, 234, 0.05) 100%);
+    transform: scale(1.01);
+}
+
+.file-upload-area.dragover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(102, 126, 234, 0.03) 100%);
+    transform: scale(1.02);
+}
+
+.file-upload-area i {
+    font-size: 4rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.file-upload-area p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.upload-link {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-link:hover {
+    text-decoration: underline;
+}
+
+/* ARCHIVOS SUBIDOS SIMPLIFICADOS */
+.uploaded-files {
+    margin-top: 1.5rem;
+}
+
+.uploaded-file {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+    border-radius: 16px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+.uploaded-file:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded-file img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded-file-info {
+    flex: 1;
+}
+
+.uploaded-file-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.uploaded-file-size {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.uploaded-file-remove {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.uploaded-file-remove:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* OPCIONES DEL FORMULARIO MODERNAS */
+.form-options {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: 
+        linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.8) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.checkbox-wrapper:hover {
+    background: rgba(102, 126, 234, 0.05);
+    transform: translateX(4px);
+}
+
+.checkbox-custom {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .checkbox-custom {
+    background: var(--gradient-primary);
+    border-color: #667eea;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    color: white;
+    font-size: 0.8rem;
+    animation: checkmark 0.3s ease-in-out;
+}
+
+@keyframes checkmark {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.checkbox-text {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* BOTÓN ENVIAR ULTRA MODERNO */
+.btn-submit {
+    width: 100%;
+    padding: 1.5rem 2.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 25px rgba(102, 126, 234, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+        0 15px 40px rgba(102, 126, 234, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #5a67d8 0%, #667eea 50%, #764ba2 100%);
+}
+
+.btn-submit:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover .btn-icon {
+    transform: translateX(6px) rotate(15deg);
+}
+
+/* SECCIÓN DE INFORMACIÓN REORGANIZADA */
+.info-section {
+    padding: 3rem 2.5rem;
+    background: #f8fafc;
+    position: relative;
+}
+
+/* Container para las tarjetas en grid reorganizado */
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Tarjeta principal de contacto */
+.primary-card {
+    grid-row: span 1;
+}
+
+/* En pantallas grandes, mantener 4 columnas */
+@media (min-width: 1200px) {
+    .info-cards-container {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* En tablets, mostrar 2 columnas */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .info-cards-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .primary-card {
+        grid-column: span 2;
+    }
+}
+
+/* En móviles, mantener columna simple */
+@media (max-width: 768px) {
+    .info-cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .primary-card {
+        grid-column: span 1;
+    }
+}
+
+/* TARJETAS DE INFORMACIÓN OPTIMIZADAS PARA GRID */
+.info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 16px 16px 0 0;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-card h3 i {
+    color: #667eea;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* INFORMACIÓN DE CONTACTO REORGANIZADA */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+    border-color: rgba(102, 126, 234, 0.15);
+    transform: translateY(-1px);
+}
+
+.contact-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--gradient-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.contact-details h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.2rem 0;
+}
+
+.contact-details p {
+    color: var(--text-secondary);
+    margin: 0 0 0.1rem 0;
+    line-height: 1.3;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.contact-details span {
+    color: var(--text-light);
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
+/* TARJETA DE DONACIÓN MODERNA */
+.donation-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef7cd 50%, #fef3c7 100%);
+    border: 2px solid #f59e0b;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation-card::before {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.donation-text {
+    color: #92400e;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* DONACIONES REORGANIZADAS */
+.donation-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.donation-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    font-weight: 600;
+    color: #92400e;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.donation-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+    background: rgba(255, 255, 255, 1);
+}
+
+.donation-method i {
+    font-size: 1.5rem;
+    color: #f59e0b;
+}
+
+.btn-donate {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-donate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+/* TARJETA DE ESTADÍSTICAS MODERNA */
+.stats-card {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #d1fae5 100%);
+    border: 2px solid #10b981;
+}
+
+.stats-card::before {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* ESTADÍSTICAS REORGANIZADAS */
+.stats-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-highlight {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border-radius: 16px;
+    border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.stat-highlight .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.stat-highlight .stat-label {
+    font-size: 0.9rem;
+    color: #065f46;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stats-mini {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.mini-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    transition: all 0.3s ease;
+}
+
+.mini-stat:hover {
+    background: rgba(16, 185, 129, 0.05);
+    transform: translateX(4px);
+}
+
+.mini-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #059669;
+}
+
+.mini-label {
+    font-size: 0.75rem;
+    color: #065f46;
+    font-weight: 500;
+}
+
+/* TARJETA FAQ MODERNA */
+.faq-card {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 50%, #e0e7ff 100%);
+    border: 2px solid #6366f1;
+}
+
+.faq-card::before {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+/* FAQ COMPACTO */
+.faq-compact .faq-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    transition: all 0.3s ease;
+}
+
+.faq-compact .faq-item:hover {
+    background: rgba(99, 102, 241, 0.05);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.faq-compact .faq-question {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.faq-compact .faq-question:hover {
+    color: #6366f1;
+}
+
+.faq-compact .faq-question i {
+    color: #6366f1;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.faq-compact .faq-item.active .faq-question i {
+    transform: rotate(90deg);
+}
+
+.faq-compact .faq-answer {
+    padding: 0 1rem 1rem 2.5rem;
+    color: #4b5563;
+    line-height: 1.5;
+    display: none;
+    font-size: 0.8rem;
+}
+
+.faq-compact .faq-item.active .faq-answer {
+    display: block;
+}
+
+/* NAVEGACIÓN DE RETORNO MODERNA */
+.navigation-back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 20;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.back-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover i {
+    transform: translateX(-4px);
+}
+
+/* ESTADOS DEL FORMULARIO MODERNOS */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #ef4444;
+    background: rgba(254, 242, 242, 0.8);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.form-group input.success,
+.form-group select.success,
+.form-group textarea.success {
+    border-color: #10b981;
+    background: rgba(240, 253, 244, 0.8);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.field-error {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+/* RESPONSIVE PARA NUEVO LAYOUT */
+@media (max-width: 1024px) {
+    .main-content {
+        margin: -3rem 1.5rem 0;
+    }
+    
+    .form-section {
+        padding: 3rem 2.5rem;
+    }
+    
+    .info-section {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin: -2rem 1rem 0;
+    }
+    
+    .form-section {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .info-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        overflow-x: visible;
+    }
+    
+    .hero-section {
+        padding: 1.5rem 1.5rem 2rem;
+        background-attachment: scroll;
+        min-height: 35vh;
+    }
+    
+    .hero-content {
+        padding: 2rem 1.5rem;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        max-width: 600px;
+    }
+    
+    .brand-logo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+    
+    .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .section-header h3 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .donation-methods,
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .navigation-back {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    
+    .back-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 1rem 1rem 1.5rem;
+        min-height: 30vh;
+    }
+    
+    .hero-content {
+        padding: 1.5rem 1.2rem;
+        max-width: 500px;
+    }
+    
+    .brand-logo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .brand-logo h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .quick-btn {
+        padding: 1.5rem 1rem;
+    }
+    
+    .quick-btn i {
+        font-size: 2rem;
+    }
+    
+    .form-section,
+    .info-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-header h3 {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .info-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-info .info-item {
+        padding: 1.25rem;
+    }
+    
+    .info-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .navigation-back {
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+/* ANIMACIONES SIMPLIFICADAS */
+.btn-submit:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* UTILIDADES MODERNAS */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* EFECTOS DE ENFOQUE MEJORADOS */
+*:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 8px;
+}

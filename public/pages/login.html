@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - PETHOUSE</title>
+    <meta name="description" content="Accede a tu cuenta en PETHOUSE. Gestiona adopciones y conecta con mascotas en necesidad.">
+    <meta name="keywords" content="login, iniciar sesion, acceso, cuenta, pethouse, mascotas">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pethouse.com/pages/login.html">
+    <meta property="og:title" content="Iniciar Sesión - PETHOUSE">
+    <meta property="og:description" content="Accede a tu cuenta en PETHOUSE y gestiona tus adopciones.">
+    <meta property="og:image" content="../assets/images/LOGO.jpg">
+    
+    <!-- PETHOUSE CSS Moderno -->
+    <link rel="stylesheet" href="../pethouse-styles.css">
+    <link rel="stylesheet" href="../performance.css">
+    <link rel="stylesheet" href="../alertas-modales.css">
+    <link rel="stylesheet" href="../login-moderno.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/LOGO.jpg">
+    
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../login.js" defer></script>
+    <script src="../validacion.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+</head>
+<body>
+    <div class="form-page">
+        <div class="contenedor-login-simple">
+            <div class="login-header">
+                <div class="logo-section">
+                    <div class="logo">🐾</div>
+                    <h1 class="brand-name">PETHOUSE</h1>
+                </div>
+                <p class="tagline">Conectando corazones con patitas</p>
+            </div>
+            <div class="login-form-card">
+                <h2>Bienvenido de vuelta</h2>
+                <p class="form-subtitle">Inicia sesión para gestionar tus adopciones</p>
+                
+                <form id="form-login" class="formulario-login">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <div class="input-container">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <div class="input-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                            <button type="button" class="toggle-password" title="Mostrar/Ocultar contraseña">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="recordar" id="recordar">
+                            <span class="checkmark"></span>
+                            Recordarme
+                        </label>
+                        <a href="#" class="enlace-olvido" id="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-login">
+                        <span class="btn-text">Iniciar Sesión</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </button>
+                </form>
+                
+                <!-- Demo Login -->
+                <div class="demo-section">
+                    <p class="demo-title">💡 Cuentas de demostración:</p>
+                    <div class="demo-accounts">
+                        <button type="button" class="demo-btn" data-email="admin@pethouse.com" data-password="PetHouse2025!">
+                            <i class="fas fa-crown"></i>
+                            Admin Demo
+                        </button>
+                        <button type="button" class="demo-btn" data-email="demo@pethouse.com" data-password="Demo123">
+                            <i class="fas fa-user"></i>
+                            Usuario Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <p>¿No tienes una cuenta? 
+                        <a href="registro.html" class="enlace-registro">Regístrate aquí</a>
+                    </p>
+                    <div class="social-login">
+                        <p>O inicia sesión con:</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google-btn" disabled title="Próximamente">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn" disabled title="Próximamente">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation back -->
+            <div class="navigation-back">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver al inicio
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts principales -->
+    <script src="../pethouse-master.js" defer></script>
+    <script src="../formularios-funcional.js" defer></script>
+    <script src="../login-moderno.js" defer></script>
+</body>
+</html>
