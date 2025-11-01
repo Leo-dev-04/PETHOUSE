@@ -3,13 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PETHOUSE - Adopción de Mascotas</title>
+    <title>PETHOUSE - Plataforma Digital para Organizaciones de Adopción</title>
+    <meta name="description" content="PETHOUSE conecta perreras, veterinarios y fundaciones con adoptantes para acelerar el proceso de adopción de mascotas de forma digital y eficiente.">
+    <meta name="keywords" content="adopcion mascotas organizaciones, perreras digitales, fundaciones animales, veterinarios adopcion, plataforma adopcion, refugio digital">
+    <meta name="author" content="PETHOUSE">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leo-dev-04.github.io/PETHOUSE/">
+    <meta property="og:title" content="PETHOUSE - Plataforma Digital para Organizaciones de Adopción">
+    <meta property="og:description" content="Conectamos perreras, veterinarios y fundaciones con adoptantes para digitalizar y acelerar el proceso de adopción.">
+    
+    <!-- SEO adicional -->
+    <link rel="canonical" href="https://leo-dev-04.github.io/PETHOUSE/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- PETHOUSE CSS Moderno -->
     <link rel="stylesheet" href="public/pethouse-styles.css">
-    <link rel="stylesheet" href="public/dashboard.css">
+    <link rel="stylesheet" href="public/performance.css">
+    <link rel="stylesheet" href="public/alertas-modales.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/assets/images/LOGO.jpg">
 </head>
-<body>
-    <div id="app"></div>
+<body class="inicio-page">
+    <!-- Header -->
+    <header class="header-modern">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">🐾</div>
+                <h1 class="brand-name">PETHOUSE</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a>
+                <a href="public/pages/adopciones.html" class="nav-link"><i class="fas fa-heart"></i> Adopciones</a>
+                <a href="public/pages/galeria.html" class="nav-link"><i class="fas fa-images"></i> Mascotas</a>
+                <a href="public/pages/servicios.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                <a href="public/pages/nosotros.html" class="nav-link"><i class="fas fa-info-circle"></i> Nosotros</a>
+                <a href="public/pages/blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                <a href="public/pages/tienda.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Tienda</a>
+                <a href="public/pages/login.html" class="nav-link login-btn"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Conectamos <span class="highlight">organizaciones</span> 
+                    con <span class="highlight">adoptantes</span>
+                </h1>
+                <p class="hero-subtitle">
+                    La plataforma digital que facilita adopciones para perreras, veterinarios y fundaciones. 
+                    Proceso 100% digital, solo van a recoger su nueva mascota.
+                </p>
+                <div class="hero-actions">
+                    <a href="public/pages/registro-organizacion.html" class="btn-primary">
+                        <i class="fas fa-building"></i>
+                        <span>Registrar Organización</span>
+                    </a>
+                    <a href="public/pages/adopciones.html" class="btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        <span>Ver Mascotas</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="public/assets/images/inicio.jpeg" alt="Mascotas felices - Perros y gatos disponibles para adopción en PETHOUSE" class="hero-image">
+                    <div class="floating-elements">
+                        <div class="floating-icon">🐕</div>
+                        <div class="floating-icon">🐱</div>
+                        <div class="floating-icon">❤️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Descubre más</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1247">0</div>
+                    <div class="stat-label">Adopciones Digitales</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="156">0</div>
+                    <div class="stat-label">Organizaciones Conectadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="892">0</div>
+                    <div class="stat-label">Familias Felices</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Semanas Promedio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo Digitalizamos las Adopciones?</h2>
+                <p class="section-subtitle">Proceso simple y eficiente para organizaciones y adoptantes</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>Organización Registra</h3>
+                    <p>Perreras, veterinarios y fundaciones suben mascotas a la plataforma</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Adoptante Explora</h3>
+                    <p>Familias buscan y conectan con mascotas cerca de su ubicación</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Proceso Digital</h3>
+                    <p>Todo se gestiona en línea, solo van a recoger la mascota</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Pets -->
+    <section class="featured-pets">
+        <div class="pets-container">
+            <div class="section-header">
+                <h2 class="section-title">Conoce a nuestros amigos</h2>
+                <p class="section-subtitle">Algunas de las mascotas que buscan hogar</p>
+            </div>
+            <div class="pets-grid">
+                <div class="pet-card" data-pet="max">
+                    <div class="pet-image">
+                        <img src="public/assets/images/chente.jpg" alt="Chente - Conejo ">
+                        <div class="pet-status">Disponible</div>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Chente</h3>
+                        <p>Conejo • 6 meses</p>
+                        <span class="pet-trait">Juguetón</span>
+                        <span class="pet-trait">Cariñoso</span>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet="luna">
+                    <div class="pet-image">
+                        <img src="public/assets/images/luna.webp" alt="Luna - Gata Persa de 2 meses disponible para adopción">
+                        <div class="pet-status">Disponible</div>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Luna</h3>
+                        <p>Gata Persa • 2 Meses</p>
+                        <span class="pet-trait">Tranquila</span>
+                        <span class="pet-trait">Cariñosa</span>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet="Rocky">
+                    <div class="pet-image">
+                        <img src="public/assets/images/rocky.jpg" alt="Rocky - Pitbull de 3 meses disponible para adopción">
+                        <div class="pet-status">Disponible</div>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Rocky</h3>
+                        <p>Pitbull • 3 Meses</p>
+                        <span class="pet-trait">Leal</span>
+                        <span class="pet-trait">Protector</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pets-cta">
+                <a href="public/pages/adopciones.html" class="btn-view-all">
+                    <span>Ver Todas las Mascotas</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizations Section -->
+    <section class="organizations-section">
+        <div class="organizations-container">
+            <div class="section-header">
+                <h2 class="section-title">Para Organizaciones</h2>
+                <p class="section-subtitle">Digitaliza tu proceso de adopción y conecta con más familias</p>
+            </div>
+            <div class="organizations-grid">
+                <div class="org-card">
+                    <div class="org-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Veterinarios</h3>
+                    <p>Conecta pacientes rescatados con familias adoptivas</p>
+                    <ul class="org-benefits">
+                        <li>Dashboard especializado</li>
+                        <li>Gestión de historiales</li>
+                        <li>Comunicación directa</li>
+                    </ul>
+                </div>
+                <div class="org-card featured">
+                    <div class="org-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Perreras & Refugios</h3>
+                    <p>Acelera adopciones y reduce sobrepoblación</p>
+                    <ul class="org-benefits">
+                        <li>Alcance nacional</li>
+                        <li>Proceso automatizado</li>
+                        <li>Estadísticas en tiempo real</li>
+                    </ul>
+                </div>
+                <div class="org-card">
+                    <div class="org-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Fundaciones</h3>
+                    <p>Maximiza el impacto de tu trabajo de rescate</p>
+                    <ul class="org-benefits">
+                        <li>Mayor visibilidad</li>
+                        <li>Donaciones integradas</li>
+                        <li>Red de colaboración</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="org-cta">
+                <a href="public/pages/registro-organizacion.html" class="btn-org-register">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Registrar Mi Organización</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>¿Listo para digitalizar las adopciones?</h2>
+                <p>Únete a las +150 organizaciones que ya transforman vidas con PETHOUSE</p>
+                <div class="cta-actions">
+                    <a href="public/pages/registro-organizacion.html" class="btn-cta-primary">
+                        <i class="fas fa-building"></i>
+                        Soy una Organización
+                    </a>
+                    <a href="public/pages/adopciones.html" class="btn-cta-secondary">
+                        <i class="fas fa-paw"></i>
+                        Quiero Adoptar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo">🐾</span>
+                        <span class="brand-name">PETHOUSE</span>
+                    </div>
+                    <p>Conectando corazones con patitas desde 2022</p>
+                    <div class="social-links">
+                        <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" rel="noopener" class="social-link facebook" title="Síguenos en Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/pethouse_mexico?igsh=MWY5am1qamprcXlsdg==" target="_blank" rel="noopener" class="social-link instagram" title="Síguenos en Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://wa.me/7461301992" target="_blank" rel="noopener" class="social-link whatsapp" title="Contáctanos por WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://twitter.com/pethouse_mx" target="_blank" rel="noopener" class="social-link twitter" title="Síguenos en Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@pethouse.oficial" target="_blank" rel="noopener" class="social-link tiktok" title="Síguenos en TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Adopciones</h4>
+                        <a href="public/pages/adopciones.html">Ver Mascotas</a>
+                        <a href="public/pages/galeria.html">Explorar Mascotas</a>
+                        <a href="public/pages/login.html">Iniciar Sesión</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <a href="public/pages/servicios.html">Veterinaria</a>
+                        <a href="public/pages/servicios.html">Cuidado</a>
+                        <a href="public/pages/servicios.html">Entrenamiento</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <a href="public/pages/contacto.html">Contacto</a>
+                        <a href="public/pages/nosotros.html">Sobre Nosotros</a>
+                        <a href="public/pages/contacto.html">Preguntas Frecuentes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PETHOUSE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/7461301992?text=Hola%20PETHOUSE,%20me%20interesa%20adoptar%20una%20mascota" 
+            target="_blank" 
+            rel="noopener" 
+            class="whatsapp-btn"
+            title="Chatea con nosotros por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">¿Necesitas ayuda?</span>
+        </a>
+    </div>
+
+    <!-- Scripts PETHOUSE -->
     <script src="public/pethouse-master.js"></script>
-    <script src="public/navegacion.js"></script>
+    <script src="public/pethouse-interactive.js"></script>
+    <script src="public/formularios-funcional.js"></script>
 </body>
 </html>
