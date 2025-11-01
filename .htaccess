@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /PETHOUSE/
+    
+    # Si el archivo existe, sirve normalmente
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # Redirige archivos CSS, JS, imágenes del directorio public
+    RewriteCond %{REQUEST_URI} !^/PETHOUSE/public/
+    RewriteRule ^(.+\.(css|js|jpg|jpeg|png|gif|webp|ico|svg))$ /PETHOUSE/public/$1 [L]
+</IfModule>

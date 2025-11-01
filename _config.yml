@@ -1,0 +1,6 @@
+include:
+  - .htaccess
+  - .nojekyll
+
+markdown: kramdown
+theme: null

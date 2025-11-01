@@ -359,8 +359,24 @@
     </div>
 
     <!-- Scripts PETHOUSE -->
-    <script src="public/pethouse-master.js"></script>
-    <script src="public/pethouse-interactive.js"></script>
-    <script src="public/formularios-funcional.js"></script>
+    <script>
+        // Agregar base para rutas relativas
+        const baseURL = '/PETHOUSE/';
+        
+        // Injectar script después de cargar
+        window.addEventListener('DOMContentLoaded', function() {
+            const scripts = [
+                'public/pethouse-master.js',
+                'public/pethouse-interactive.js',
+                'public/formularios-funcional.js'
+            ];
+            
+            scripts.forEach(src => {
+                const script = document.createElement('script');
+                script.src = baseURL + src;
+                document.body.appendChild(script);
+            });
+        });
+    </script>
 </body>
 </html>
